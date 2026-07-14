@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Features — eureqa!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; padding: 0; background: #FAF7F2; }
+    ::selection { background: #C4A6D1; color: #2B2950; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    summary::-webkit-details-marker { display: none; }
+    header details[data-eq-burger] { display: none; }
+    footer a[href*="linkedin.com"]:not([data-eq-icon]), footer a[href*="instagram.com"]:not([data-eq-icon]), footer a[href*="chat.whatsapp.com"]:not([data-eq-icon]), footer a[href*="beehiiv.com/subscribe"]:not([data-eq-subbtn]) { display: none; }
+    /* ---- mobile only: desktop stays untouched ---- */
+    @media (max-width: 900px) {
+      body { overflow-x: hidden; }
+      header > div { height: 62px !important; padding: 0 18px !important; }
+      header nav { gap: 12px !important; }
+      header nav > a[href$=".dc.html"], header nav > a[href="index.html"] { display: none !important; }
+      header nav > a[target="_blank"] { font-size: 11px !important; height: 44px !important; padding: 0 16px !important; box-sizing: border-box !important; display: inline-flex !important; align-items: center !important; }
+      header details[data-eq-burger] { display: block; position: relative; }
+      #startups > div:first-child, #interviews > div:first-child, #artists > div > div:first-child { flex-wrap: wrap !important; row-gap: 4px !important; }
+    }
+    @media (max-width: 900px) {
+      header nav > a[target="_blank"] { height: 30px !important; padding: 0 12px !important; display: inline-flex !important; align-items: center !important; font-size: 10px !important; box-sizing: border-box !important; }
+      header details[data-eq-burger] summary { width: 30px !important; height: 30px !important; padding: 7px 6px !important; gap: 3px !important; border-radius: 8px !important; }
+      header > div > a > span { color: #C4A6D1 !important; }
+      footer a[href*="linkedin.com"]:not([data-eq-icon]), footer a[href*="instagram.com"]:not([data-eq-icon]), footer a[href*="chat.whatsapp.com"]:not([data-eq-icon]) { display: none !important; }
+      footer a[data-eq-icon] { display: inline-flex !important; }
+      footer > div > div:last-child > span:last-child { display: none !important; }
+      footer > div > div:last-child > span:first-child { font-weight: 600 !important; }
+      footer a[href*="beehiiv.com/subscribe"]:not([data-eq-subbtn]) { display: none !important; }
+      footer a[data-eq-subbtn] { display: inline-flex !important; }
+      footer div[data-eq-legal] { justify-content: center !important; }
+      #startups p, #artists p, #interviews p { font-size: 19px !important; line-height: 1.55 !important; }
+      section[data-screen-label="Features intro"] { padding-left: 20px !important; padding-right: 20px !important; padding-bottom: 16px !important; }
+      section[data-screen-label="Features intro"] > div:last-child > div:last-child { flex-wrap: nowrap !important; width: 100%; gap: 6px !important; }
+      section[data-screen-label="Features intro"] > div:last-child > div:last-child > a { flex: 1 1 0; text-align: center; padding: 9px 2px !important; font-size: 10px !important; letter-spacing: 0.04em !important; white-space: nowrap; }
+      #startups { padding-top: 10px !important; }
+    }
+  </style>
+  <script src="data/features-index.js"></script>
+</helmet>
+
+<div style="min-height:100vh; background:#FAF7F2; color:#2B2950; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased">
+
+  <!-- ================= HEADER ================= -->
+  <header data-screen-label="Header" style="position:sticky; top:0; z-index:50; background:rgba(250,247,242,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #D8D2E8">
+    <div style="max-width:1320px; margin:0 auto; padding:0 32px; height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px">
+      <a href="index.html" style="text-decoration:none; color:#2B2950; font-weight:900; font-size:30px; letter-spacing:-0.03em; line-height:1">eureqa<span style="color:#C4A6D1">!</span></a>
+      <nav style="display:flex; align-items:center; gap:28px">
+        <a href="index.html" style-hover="color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding-bottom:2px">Home</a>
+        <a href="Archive.dc.html" style-hover="color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding-bottom:2px">Archive</a>
+        <a href="Features.dc.html" style="text-decoration:none; color:#8E1230; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; border-bottom:2px solid #8E1230; padding-bottom:2px">Features</a>
+        <a href="Events.dc.html" style-hover="color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding-bottom:2px">Events</a>
+        <a href="About.dc.html" style-hover="color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding-bottom:2px">About</a>
+        <a href="https://eureqa.beehiiv.com/subscribe" target="_blank" rel="noopener" style-hover="transform:translateY(-2px); box-shadow:0 8px 20px rgba(142,18,48,0.3)" style="text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:12px 22px; border-radius:9px; transition:transform 0.15s ease, box-shadow 0.15s ease">Subscribe</a>
+        <details data-eq-burger="1">
+          <summary aria-label="Menu" style="list-style:none; display:flex; flex-direction:column; justify-content:center; gap:4px; width:44px; height:44px; padding:12px; box-sizing:border-box; border:2px solid #2B2950; border-radius:9px; cursor:pointer; -webkit-tap-highlight-color:transparent">
+            <span style="display:block; height:2px; background:#2B2950; border-radius:2px"></span>
+            <span style="display:block; height:2px; background:#2B2950; border-radius:2px"></span>
+            <span style="display:block; height:2px; background:#2B2950; border-radius:2px"></span>
+          </summary>
+          <div style="position:absolute; right:0; top:calc(100% + 12px); min-width:210px; background:#FAF7F2; border:1px solid #D8D2E8; border-radius:14px; box-shadow:0 18px 40px rgba(43,41,80,0.2); padding:10px; display:grid; gap:2px; z-index:70">
+            <a href="index.html" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">Home</a>
+            <a href="Archive.dc.html" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">Archive</a>
+            <a href="Features.dc.html" style="text-decoration:none; color:#8E1230; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">Features</a>
+            <a href="Events.dc.html" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">Events</a>
+            <a href="About.dc.html" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">About</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HEAD ================= -->
+  <section data-screen-label="Features intro" style="max-width:1280px; width:100%; box-sizing:border-box; margin:0 auto; padding:72px 32px 48px">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px">
+      <span style="width:10px; height:10px; background:#8E1230; display:inline-block"></span>
+      <span style="font-size:12px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8E1230">Everyone we've ever featured</span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; align-items:end; justify-content:space-between; gap:24px; border-bottom:2px solid #2B2950; padding-bottom:28px">
+      <h1 style="margin:0; font-weight:900; font-size:clamp(56px,7vw,96px); letter-spacing:-0.035em; line-height:0.95; color:#35325E">Features</h1>
+      <p style="margin:0; max-width:44ch; font-family:'Newsreader',serif; font-size:18px; line-height:1.5; color:#4A4770">Hover over any card to see what they do, and jump straight to their story in the edition where it was told.</p>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:16px; margin-top:28px">
+      <div style="position:relative; flex:1 1 340px; max-width:540px">
+        <input value="{{ query }}" onChange="{{ onQuery }}" placeholder="Search startups, artists, founders, universities…" style-focus="border-color:#8E1230" style="width:100%; box-sizing:border-box; font-family:'Archivo',sans-serif; font-size:15px; font-weight:500; color:#2B2950; background:#FFFFFF; border:2px solid #2B2950; border-radius:11px; padding:15px 46px 15px 18px; outline:none; transition:border-color 0.12s ease">
+        <sc-if value="{{ hasQuery }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ onClear }}" aria-label="Clear search" style-hover="background:#C4A6D1" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); background:#EFE6F4; border:none; border-radius:8px; width:30px; height:30px; font-size:14px; font-weight:700; color:#35325E; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.12s ease">✕</button>
+        </sc-if>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:12px">
+        <a href="#startups" style-hover="background:#C4A6D1" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:10px 18px; border:2px solid #2B2950; border-radius:10px; background:#EFE6F4; transition:background 0.12s ease">Startups · {{ nStartups }}</a>
+        <a href="#artists" style-hover="background:#C4A6D1" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:10px 18px; border:2px solid #2B2950; border-radius:10px; background:#EFE6F4; transition:background 0.12s ease">Artists · {{ nArtists }}</a>
+        <a href="#interviews" style-hover="background:#C4A6D1" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:10px 18px; border:2px solid #2B2950; border-radius:10px; background:#EFE6F4; transition:background 0.12s ease">Interviews · {{ nInterviews }}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STARTUPS ================= -->
+  <section id="startups" data-screen-label="Startups" style="max-width:1280px; width:100%; box-sizing:border-box; margin:0 auto; padding:32px 32px 72px">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:36px">
+      <h2 style="margin:0; font-weight:900; font-size:clamp(30px,3vw,44px); letter-spacing:-0.03em; color:#35325E">Startups</h2>
+      <span style="font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">Every venture, every edition</span>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(215px,1fr)); gap:28px">
+      <sc-for list="{{ startups }}" as="item" hint-placeholder-count="14">
+        <div style="position:relative" onMouseEnter="{{ item.onEnter }}" onMouseLeave="{{ item.onLeave }}" onClick="{{ item.onToggle }}">
+          <div style="border:2px solid #2B2950; background:#C4A6D1; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; box-shadow:5px 5px 0 #2B2950; cursor:pointer">
+            <span style="font-weight:900; font-size:96px; letter-spacing:-0.04em; color:#35325E; line-height:1">{{ item.letter }}</span>
+          </div>
+          <div style="margin-top:14px; font-weight:800; font-size:19px; letter-spacing:-0.01em">{{ item.name }}</div>
+          <div style="margin-top:4px; font-family:'Newsreader',serif; font-size:14.5px; color:#6B688F; line-height:1.35">{{ item.founders }}</div>
+          <div style="{{ item.overlayStyle }}">
+            <div style="font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">{{ item.edition }} edition · {{ item.uni }}</div>
+            <div style="font-weight:800; font-size:19px; letter-spacing:-0.01em; margin-top:8px">{{ item.name }}</div>
+            <p style="margin:8px 0 12px; font-family:'Newsreader',serif; font-size:14.5px; line-height:1.45; color:#3E3B63">{{ item.blurb }}</p>
+            <a href="{{ item.href }}" style-hover="transform:translate(-2px,-2px); box-shadow:4px 4px 0 #2B2950" style="display:inline-block; text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:10px 16px; border:2px solid #2B2950; box-shadow:2px 2px 0 #2B2950; transition:transform 0.12s ease, box-shadow 0.12s ease">Read the article →</a>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <sc-if value="{{ startupsEmpty }}" hint-placeholder-val="{{ false }}">
+      <p style="margin:8px 0 0; font-family:'Newsreader',serif; font-style:italic; font-size:17px; color:#6B688F">No startups matching “{{ query }}”. Try a founder name, university or edition.</p>
+    </sc-if>
+  </section>
+
+  <!-- ================= ARTISTS ================= -->
+  <section id="artists" data-screen-label="Artists" style="background:#EFE6F4; border-top:2px solid #2B2950; border-bottom:2px solid #2B2950">
+    <div style="max-width:1280px; width:100%; box-sizing:border-box; margin:0 auto; padding:64px 32px 72px">
+      <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:36px">
+        <h2 style="margin:0; font-weight:900; font-size:clamp(30px,3vw,44px); letter-spacing:-0.03em; color:#35325E">Artists</h2>
+        <span style="font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">Artist of the Month, every month</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(215px,1fr)); gap:28px">
+        <sc-for list="{{ artists }}" as="item" hint-placeholder-count="3">
+          <div style="position:relative" onMouseEnter="{{ item.onEnter }}" onMouseLeave="{{ item.onLeave }}" onClick="{{ item.onToggle }}">
+            <div style="border:2px solid #2B2950; background:#FAF7F2; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; box-shadow:5px 5px 0 #2B2950; cursor:pointer">
+              <span style="font-weight:900; font-size:96px; letter-spacing:-0.04em; color:#8E1230; line-height:1">{{ item.letter }}</span>
+            </div>
+            <div style="margin-top:14px; font-weight:800; font-size:19px; letter-spacing:-0.01em">{{ item.name }}</div>
+            <div style="margin-top:4px; font-family:'Newsreader',serif; font-size:14.5px; color:#6B688F; line-height:1.35">{{ item.founders }}</div>
+            <div style="{{ item.overlayStyle }}">
+              <div style="font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">{{ item.edition }} edition · {{ item.uni }}</div>
+              <div style="font-weight:800; font-size:19px; letter-spacing:-0.01em; margin-top:8px">{{ item.name }}</div>
+              <p style="margin:8px 0 12px; font-family:'Newsreader',serif; font-size:14.5px; line-height:1.45; color:#3E3B63">{{ item.blurb }}</p>
+              <a href="{{ item.href }}" style-hover="transform:translate(-2px,-2px); box-shadow:4px 4px 0 #2B2950" style="display:inline-block; text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:10px 16px; border:2px solid #2B2950; box-shadow:2px 2px 0 #2B2950; transition:transform 0.12s ease, box-shadow 0.12s ease">Read the article →</a>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <sc-if value="{{ artistsEmpty }}" hint-placeholder-val="{{ false }}">
+        <p style="margin:8px 0 0; font-family:'Newsreader',serif; font-style:italic; font-size:17px; color:#6B688F">No artists matching “{{ query }}”.</p>
+      </sc-if>
+      <div style="margin-top:48px; border-top:1px solid #B7A8C9; padding-top:20px; display:flex; flex-wrap:wrap; align-items:baseline; gap:12px 28px">
+        <span style="font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8E1230">Cover artists</span>
+        <span style="font-family:'Newsreader',serif; font-size:15px; color:#4A4770">Elif Deren Bolten (April Fools) · Julia Fee Hansen (Momentum) · Amber Miller (The Glow Up) · Veronica Giallatini (Crosscurrents)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERVIEWS ================= -->
+  <section id="interviews" data-screen-label="Interviews" style="max-width:1280px; width:100%; box-sizing:border-box; margin:0 auto; padding:64px 32px 96px">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:36px">
+      <h2 style="margin:0; font-weight:900; font-size:clamp(30px,3vw,44px); letter-spacing:-0.03em; color:#35325E">Interviews</h2>
+      <span style="font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">Long conversations, real answers</span>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(215px,1fr)); gap:28px">
+      <sc-for list="{{ interviews }}" as="item" hint-placeholder-count="2">
+        <div style="position:relative" onMouseEnter="{{ item.onEnter }}" onMouseLeave="{{ item.onLeave }}" onClick="{{ item.onToggle }}">
+          <div style="border:2px solid #2B2950; background:#35325E; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; box-shadow:5px 5px 0 #2B2950; cursor:pointer">
+            <span style="font-weight:900; font-size:96px; letter-spacing:-0.04em; color:#C4A6D1; line-height:1">{{ item.letter }}</span>
+          </div>
+          <div style="margin-top:14px; font-weight:800; font-size:19px; letter-spacing:-0.01em">{{ item.name }}</div>
+          <div style="margin-top:4px; font-family:'Newsreader',serif; font-size:14.5px; color:#6B688F; line-height:1.35">{{ item.founders }}</div>
+          <div style="{{ item.overlayStyle }}">
+            <div style="font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">{{ item.edition }} edition · {{ item.uni }}</div>
+            <div style="font-weight:800; font-size:19px; letter-spacing:-0.01em; margin-top:8px">{{ item.name }}</div>
+            <p style="margin:8px 0 12px; font-family:'Newsreader',serif; font-size:14.5px; line-height:1.45; color:#3E3B63">{{ item.blurb }}</p>
+            <a href="{{ item.href }}" style-hover="transform:translate(-2px,-2px); box-shadow:4px 4px 0 #2B2950" style="display:inline-block; text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:10px 16px; border:2px solid #2B2950; box-shadow:2px 2px 0 #2B2950; transition:transform 0.12s ease, box-shadow 0.12s ease">Read the interview →</a>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <sc-if value="{{ interviewsEmpty }}" hint-placeholder-val="{{ false }}">
+      <p style="margin:8px 0 0; font-family:'Newsreader',serif; font-style:italic; font-size:17px; color:#6B688F">No interviews matching “{{ query }}”.</p>
+    </sc-if>
+  </section>
+
+  <!-- ================= CTA STRIP ================= -->
+  <section data-screen-label="Get featured" style="background:#8E1230; border-top:2px solid #2B2950">
+    <div style="max-width:1280px; margin:0 auto; padding:56px 32px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px">
+      <div>
+        <div style="font-weight:900; font-size:clamp(26px,2.6vw,36px); letter-spacing:-0.02em; color:#FAF7F2">Building something? Making something?</div>
+        <p style="margin:8px 0 0; font-family:'Newsreader',serif; font-size:17px; color:#EFD9DF">The next feature could be yours. Tell us about your venture or your art.</p>
+      </div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdd27vZBDtVwNfMhxOEBQ77yZwiah5tPThF8XiuwHjj23IHsg/viewform" target="_blank" rel="noopener" style-hover="transform:translate(-3px,-3px); box-shadow:7px 7px 0 #2B2950" style="text-decoration:none; background:#FAF7F2; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 28px; border:2px solid #2B2950; box-shadow:4px 4px 0 #2B2950; transition:transform 0.12s ease, box-shadow 0.12s ease">Get featured ↗︎</a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer data-screen-label="Footer" style="background:#2B2950; color:#C9C5E0; border-top:2px solid #C4A6D1">
+    <div style="max-width:1280px; margin:0 auto; padding:48px 32px 36px">
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px; padding-bottom:28px; border-bottom:1px solid #4A4770">
+        <a href="index.html" style="text-decoration:none; font-weight:900; font-size:32px; letter-spacing:-0.03em; color:#FAF7F2; line-height:1">eureqa<span style="color:#C4A6D1">!</span></a>
+        <div style="display:flex; flex-wrap:wrap; gap:24px">
+          <a data-eq-icon="1" href="https://www.linkedin.com/company/eureqa-newsletter" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex; width:42px; height:42px; align-items:center; justify-content:center; color:#C9C5E0; border:1px solid #4A4770; border-radius:12px; text-decoration:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.23 0z"></path></svg></a>
+          <a data-eq-icon="1" href="https://www.instagram.com/eureqa.newsletter/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex; width:42px; height:42px; align-items:center; justify-content:center; color:#C9C5E0; border:1px solid #4A4770; border-radius:12px; text-decoration:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.4" y="2.4" width="19.2" height="19.2" rx="5.2" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg></a>
+          <a data-eq-icon="1" href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373?utm_campaign=eureqa-crosscurrents&amp;utm_medium=referral&amp;utm_source=eureqa%21.uk" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:inline-flex; width:42px; height:42px; align-items:center; justify-content:center; color:#C9C5E0; border:1px solid #4A4770; border-radius:12px; text-decoration:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.37l-.36-.22-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"></path></svg></a>
+          <a data-eq-subbtn="1" href="https://eureqa.beehiiv.com/subscribe" target="_blank" rel="noopener" style="display:inline-flex; height:42px; box-sizing:border-box; align-items:center; padding:0 20px; border:1px solid #4A4770; border-radius:12px; color:#C9C5E0; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none">Subscribe</a>
+          <a href="https://www.linkedin.com/company/eureqa-newsletter" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:13px; font-weight:600">LinkedIn ↗︎</a>
+          <a href="https://www.instagram.com/eureqa.newsletter/" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:13px; font-weight:600">Instagram ↗︎</a>
+          <a href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:13px; font-weight:600">WhatsApp ↗︎</a>
+          <a href="https://eureqa.beehiiv.com/subscribe" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:13px; font-weight:600">Subscribe ↗︎</a>
+        </div>
+      </div>
+      <div data-eq-legal="1" style="display:flex; flex-wrap:wrap; justify-content:flex-end; gap:20px; padding-top:16px">
+        <a href="Legal.dc.html#terms" style-hover="color:#FAF7F2" style="text-decoration:none; color:#8B87B5; font-size:12.5px; font-weight:600">Terms of Use</a>
+        <a href="Legal.dc.html#privacy" style-hover="color:#FAF7F2" style="text-decoration:none; color:#8B87B5; font-size:12.5px; font-weight:600">Privacy Policy</a>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; padding-top:20px; font-size:13px; color:#8B87B5">
+        <span>© 2026 eureqa! — Real insights beyond pitch decks.</span>
+        <span>Publisher: Leonard Ulrich · Editor in Chief: Lauren Manby</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { ready: false, hovered: null, query: '' };
+
+  componentDidMount() {
+    this._poll = setInterval(() => {
+      if (window.EUREQA && window.EUREQA.features) {
+        clearInterval(this._poll);
+        this.setState({ ready: true }, () => this._scrollToHash());
+      }
+    }, 40);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._poll);
+  }
+
+  _scrollToHash() {
+    const hash = window.location.hash.replace('#', '');
+    if (!hash) return;
+    setTimeout(() => {
+      const el = document.getElementById(hash);
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 88;
+        window.scrollTo({ top, behavior: 'auto' });
+      }
+    }, 60);
+  }
+
+  _decorate(list, group) {
+    return list.map((raw, i) => {
+      const key = group + ':' + i;
+      const on = this.state.hovered === key;
+      return Object.assign({}, raw, {
+        href: 'Edition.dc.html?e=' + raw.slug + '#' + raw.sectionId,
+        onEnter: () => this.setState({ hovered: key }),
+        onLeave: () => this.setState(s => (s.hovered === key ? { hovered: null } : null)),
+        onToggle: () => this.setState(s => ({ hovered: s.hovered === key ? null : key })),
+        overlayStyle: {
+          position: 'absolute',
+          left: '-2px',
+          top: '-2px',
+          width: '100%',
+          minHeight: '100%',
+          boxSizing: 'border-box',
+          background: '#FAF7F2',
+          border: '2px solid #2B2950',
+          boxShadow: '5px 5px 0 #2B2950',
+          padding: '18px',
+          zIndex: on ? 20 : -1,
+          opacity: on ? 1 : 0,
+          transform: on ? 'translateY(0)' : 'translateY(6px)',
+          transition: 'opacity 0.15s ease, transform 0.15s ease',
+          pointerEvents: on ? 'auto' : 'none'
+        }
+      });
+    });
+  }
+
+  renderVals() {
+    const F = (this.state.ready && window.EUREQA.features) || { startups: [], artists: [], interviews: [] };
+    const q = this.state.query.trim().toLowerCase();
+    const match = (it) => !q || [it.name, it.founders, it.uni, it.edition, it.blurb].join(' ').toLowerCase().indexOf(q) !== -1;
+    const s = F.startups.filter(match);
+    const a = F.artists.filter(match);
+    const i = F.interviews.filter(match);
+    return {
+      query: this.state.query,
+      hasQuery: q.length > 0,
+      onQuery: (e) => this.setState({ query: e.target.value, hovered: null }),
+      onClear: () => this.setState({ query: '', hovered: null }),
+      nStartups: s.length,
+      nArtists: a.length,
+      nInterviews: i.length,
+      startupsEmpty: this.state.ready && q.length > 0 && s.length === 0,
+      artistsEmpty: this.state.ready && q.length > 0 && a.length === 0,
+      interviewsEmpty: this.state.ready && q.length > 0 && i.length === 0,
+      startups: this._decorate(s, 's'),
+      artists: this._decorate(a, 'a'),
+      interviews: this._decorate(i, 'i')
+    };
+  }
+}
+</script>
+</body>
+</html>
