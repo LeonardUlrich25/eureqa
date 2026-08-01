@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Edition — eureqa!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; padding: 0; background: #FAF7F2; }
+    ::selection { background: #C4A6D1; color: #2B2950; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    summary::-webkit-details-marker { display: none; }
+    header details[data-eq-burger] { display: none; }
+    footer a[href*="linkedin.com"]:not([data-eq-icon]), footer a[href*="instagram.com"]:not([data-eq-icon]), footer a[href*="chat.whatsapp.com"]:not([data-eq-icon]), footer a[href*="beehiiv.com/subscribe"]:not([data-eq-subbtn]) { display: none; }
+    /* ---- desktop only: cap in-article image size (cover untouched) ---- */
+    @media (min-width: 901px) {
+      article figure img { width: auto !important; max-width: 100% !important; max-height: 460px !important; margin-left: auto; margin-right: auto; }
+      section[data-screen-label="Edition masthead"] h1[data-eq-fit="1"] { font-size: clamp(42px, 5.2vw, 76px) !important; }
+    }
+    /* ---- mobile only: desktop stays untouched ---- */
+    @media (max-width: 900px) {
+      body { overflow-x: hidden; }
+      header > div { height: 62px !important; padding: 0 18px !important; }
+      header nav { gap: 12px !important; }
+      header nav > a[href$=".dc.html"], header nav > a[href="index.html"] { display: none !important; }
+      header nav > a[target="_blank"] { font-size: 11px !important; height: 44px !important; padding: 0 16px !important; box-sizing: border-box !important; display: inline-flex !important; align-items: center !important; }
+      header details[data-eq-burger] { display: block; position: relative; }
+      section[data-screen-label="Edition masthead"] > div { grid-template-columns: 1fr !important; gap: 40px !important; }
+      section[data-screen-label="Edition masthead"] > div > div:last-child { justify-self: center !important; }
+      section[data-screen-label="Edition masthead"] h1 { font-size: clamp(38px, 11vw, 56px) !important; }
+      section[data-screen-label="Edition masthead"] h1[data-eq-fit="1"] { font-size: clamp(28px, 9vw, 44px) !important; }
+      div[data-screen-label="Articles"] article { grid-template-columns: 1fr !important; gap: 28px !important; padding: 52px 0 !important; }
+      div[data-screen-label="Articles"] article > div:first-child > div { position: static !important; }
+      div[data-screen-label="Articles"] article div[data-desk-links] { display: none !important; }
+      div[data-screen-label="Articles"] article div[data-mob-links] { display: flex !important; }
+    }
+    @media (max-width: 900px) {
+      header nav > a[target="_blank"] { height: 30px !important; padding: 0 12px !important; display: inline-flex !important; align-items: center !important; font-size: 10px !important; box-sizing: border-box !important; }
+      header details[data-eq-burger] summary { width: 30px !important; height: 30px !important; padding: 7px 6px !important; gap: 3px !important; border-radius: 8px !important; }
+      header > div > a > span { color: #C4A6D1 !important; }
+      footer a[href*="linkedin.com"]:not([data-eq-icon]), footer a[href*="instagram.com"]:not([data-eq-icon]), footer a[href*="chat.whatsapp.com"]:not([data-eq-icon]) { display: none !important; }
+      footer a[data-eq-icon] { display: inline-flex !important; }
+      footer > div > div:last-child > span:last-child { display: none !important; }
+      footer > div > div:last-child > span:first-child { font-weight: 600 !important; }
+      footer a[href*="beehiiv.com/subscribe"]:not([data-eq-subbtn]) { display: none !important; }
+      footer a[data-eq-subbtn] { display: inline-flex !important; }
+      footer div[data-eq-legal] { justify-content: center !important; }
+      section[data-screen-label="Edition masthead"] > div > div:last-child > div:first-child { bottom: 36px !important; }
+    }
+  </style>
+  <script src="data/edition-april-fools.js"></script>
+  <script src="data/edition-momentum.js"></script>
+  <script src="data/edition-the-glow-up.js"></script>
+  <script src="data/edition-crosscurrents.js"></script>
+  <script src="data/edition-europe-maxxing.js"></script>
+</helmet>
+
+<div style="min-height:100vh; background:#FAF7F2; color:#2B2950; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased">
+
+  <!-- ================= HEADER ================= -->
+  <header data-screen-label="Header" style="position:sticky; top:0; z-index:50; background:rgba(250,247,242,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #D8D2E8">
+    <div style="max-width:1320px; margin:0 auto; padding:0 32px; height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px">
+      <a href="index.html" style="text-decoration:none; color:#2B2950; font-weight:900; font-size:30px; letter-spacing:-0.03em; line-height:1">eureqa<span style="color:#C4A6D1">!</span></a>
+      <nav style="display:flex; align-items:center; gap:28px">
+        <a href="index.html" style-hover="color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding-bottom:2px">Home</a>
+        <a href="Archive.dc.html" style="text-decoration:none; color:#8E1230; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; border-bottom:2px solid #8E1230; padding-bottom:2px">Archive</a>
+        <a href="Features.dc.html" style-hover="color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding-bottom:2px">Features</a>
+        <a href="Events.dc.html" style-hover="color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding-bottom:2px">Events</a>
+        <a href="About.dc.html" style-hover="color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding-bottom:2px">About</a>
+        <a href="https://eureqa.beehiiv.com/subscribe" target="_blank" rel="noopener" style-hover="transform:translateY(-2px); box-shadow:0 8px 20px rgba(142,18,48,0.3)" style="text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:12px 22px; border-radius:9px; transition:transform 0.15s ease, box-shadow 0.15s ease">Subscribe</a>
+        <details data-eq-burger="1">
+          <summary aria-label="Menu" style="list-style:none; display:flex; flex-direction:column; justify-content:center; gap:4px; width:44px; height:44px; padding:12px; box-sizing:border-box; border:2px solid #2B2950; border-radius:9px; cursor:pointer; -webkit-tap-highlight-color:transparent">
+            <span style="display:block; height:2px; background:#2B2950; border-radius:2px"></span>
+            <span style="display:block; height:2px; background:#2B2950; border-radius:2px"></span>
+            <span style="display:block; height:2px; background:#2B2950; border-radius:2px"></span>
+          </summary>
+          <div style="position:absolute; right:0; top:calc(100% + 12px); min-width:210px; background:#FAF7F2; border:1px solid #D8D2E8; border-radius:14px; box-shadow:0 18px 40px rgba(43,41,80,0.2); padding:10px; display:grid; gap:2px; z-index:70">
+            <a href="index.html" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">Home</a>
+            <a href="Archive.dc.html" style="text-decoration:none; color:#8E1230; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">Archive</a>
+            <a href="Features.dc.html" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">Features</a>
+            <a href="Events.dc.html" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">Events</a>
+            <a href="About.dc.html" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">About</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <sc-if value="{{ ready }}" hint-placeholder-val="{{ false }}">
+
+    <!-- ================= MASTHEAD ================= -->
+    <section data-screen-label="Edition masthead" style="background:#EFE6F4; border-bottom:2px solid #2B2950">
+      <div style="max-width:1280px; width:100%; box-sizing:border-box; margin:0 auto; padding:64px 32px 72px; display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:56px; align-items:center">
+        <div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:22px">
+            <span style="background:#8E1230; color:#FAF7F2; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:6px 12px; border:2px solid #2B2950">Edition N°{{ number }}</span>
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8E1230">{{ month }} · {{ read }}</span>
+          </div>
+          <h1 data-eq-fit="{{ titleFit }}" style="margin:0 0 22px; font-weight:900; font-size:clamp(52px,6.5vw,96px); letter-spacing:-0.035em; line-height:0.95; color:#35325E">{{ title }}</h1>
+          <p style="margin:0 0 32px; max-width:52ch; font-family:'Newsreader',serif; font-style:italic; font-size:21px; line-height:1.5; color:#4A4770">{{ dek }}</p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px">
+            <sc-for list="{{ toc }}" as="item" hint-placeholder-count="5">
+              <a href="{{ item.href }}" onClick="{{ item.onJump }}" style-hover="background:#C4A6D1" style="text-decoration:none; color:#2B2950; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:9px 15px; border:2px solid #2B2950; background:#FAF7F2; transition:background 0.12s ease">{{ item.label }}</a>
+            </sc-for>
+          </div>
+        </div>
+        <div style="position:relative; justify-self:end; width:min(100%,420px)">
+          <div style="position:absolute; left:-18px; bottom:36px; width:65%; height:55%; background:#C4A6D1"></div>
+          <div role="img" aria-label="Edition cover art" style="{{ artStyle }}"></div>
+          <div style="position:relative; margin-top:12px; display:flex; justify-content:flex-end">
+            <a href="{{ artistUrl }}" target="_blank" rel="noopener" style-hover="color:#8E1230" style="text-decoration:none; font-family:'Newsreader',serif; font-style:italic; font-size:14px; color:#6B688F">Cover art by {{ artistName }} ↗︎</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ARTICLES ================= -->
+    <div data-screen-label="Articles" style="max-width:1280px; width:100%; box-sizing:border-box; margin:0 auto; padding:0 32px">
+      <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="5">
+        <article id="{{ sec.id }}" data-screen-label="{{ sec.title }}" style="display:grid; grid-template-columns:minmax(0,4fr) minmax(0,8fr); gap:56px; padding:72px 0; border-bottom:2px solid #2B2950">
+          <div>
+            <div style="position:sticky; top:104px">
+              <div style="display:inline-block; background:{{ sec.tagBg }}; color:{{ sec.tagFg }}; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:6px 12px; border:2px solid #2B2950">{{ sec.label }}</div>
+              <h2 style="margin:18px 0 0; font-weight:900; font-size:clamp(30px,3.2vw,46px); letter-spacing:-0.03em; line-height:1.0; color:#35325E; text-wrap:balance">{{ sec.title }}</h2>
+              <sc-if value="{{ sec.uni }}" hint-placeholder-val="{{ true }}">
+                <div style="margin-top:14px; font-size:12px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230">📍 {{ sec.uni }}</div>
+              </sc-if>
+              <div style="margin-top:10px; font-family:'Newsreader',serif; font-size:16px; color:#6B688F">— <a href="{{ sec.bylineUrl }}" target="_blank" rel="noopener" style-hover="color:#8E1230" style="color:#6B688F; text-decoration:underline; text-underline-offset:3px">{{ sec.bylineName }}</a></div>
+              <sc-if value="{{ sec.hasLinks }}" hint-placeholder-val="{{ true }}">
+                <div data-desk-links="1" style="margin-top:22px; display:flex; flex-wrap:wrap; gap:8px">
+                  <sc-for list="{{ sec.links }}" as="lnk" hint-placeholder-count="2">
+                    <a href="{{ lnk.url }}" target="_blank" rel="noopener" style-hover="background:#C4A6D1" style="text-decoration:none; color:#2B2950; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:7px 12px; border:2px solid #2B2950; background:#EFE6F4; transition:background 0.12s ease">{{ lnk.label }} ↗︎</a>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+          <div style="max-width:680px">{{ sec.bodyEl }}
+            <sc-if value="{{ sec.hasLinks }}" hint-placeholder-val="{{ false }}">
+              <div data-mob-links="1" style="display:none; margin-top:10px; flex-wrap:wrap; gap:8px">
+                <sc-for list="{{ sec.links }}" as="lnk" hint-placeholder-count="2">
+                  <a href="{{ lnk.url }}" target="_blank" rel="noopener" style-hover="background:#C4A6D1" style="text-decoration:none; color:#2B2950; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:7px 12px; border:2px solid #2B2950; background:#EFE6F4; transition:background 0.12s ease">{{ lnk.label }} ↗︎</a>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+
+    <!-- ================= PREV / NEXT ================= -->
+    <section data-screen-label="Edition navigation" style="max-width:1280px; width:100%; box-sizing:border-box; margin:0 auto; padding:48px 32px 80px; display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap">
+      <sc-if value="{{ hasPrev }}" hint-placeholder-val="{{ true }}">
+        <a href="{{ prevHref }}" style-hover="transform:translate(-3px,-3px); box-shadow:7px 7px 0 #2B2950" style="text-decoration:none; color:#2B2950; border:2px solid #2B2950; background:#FAF7F2; box-shadow:4px 4px 0 #2B2950; padding:20px 26px; transition:transform 0.12s ease, box-shadow 0.12s ease">
+          <div style="font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">← Previous edition</div>
+          <div style="font-weight:800; font-size:22px; margin-top:6px">{{ prevTitle }}</div>
+        </a>
+      </sc-if>
+      <sc-if value="{{ hasNext }}" hint-placeholder-val="{{ true }}">
+        <a href="{{ nextHref }}" style-hover="transform:translate(-3px,-3px); box-shadow:7px 7px 0 #2B2950" style="text-decoration:none; color:#2B2950; border:2px solid #2B2950; background:#FAF7F2; box-shadow:4px 4px 0 #2B2950; padding:20px 26px; margin-left:auto; text-align:right; transition:transform 0.12s ease, box-shadow 0.12s ease">
+          <div style="font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">Next edition →</div>
+          <div style="font-weight:800; font-size:22px; margin-top:6px">{{ nextTitle }}</div>
+        </a>
+      </sc-if>
+    </section>
+
+  </sc-if>
+
+  <!-- ================= SUBSCRIBE BAND ================= -->
+  <section data-screen-label="Subscribe band" style="background:#35325E; border-top:2px solid #2B2950">
+    <div style="max-width:1280px; margin:0 auto; padding:64px 32px; text-align:center">
+      <h2 style="margin:0 auto 14px; max-width:26ch; font-weight:900; font-size:clamp(28px,3.2vw,44px); letter-spacing:-0.03em; line-height:1.05; color:#FAF7F2">Could the next feature be yours?</h2>
+      <p style="margin:0 auto 36px; max-width:52ch; font-family:'Newsreader',serif; font-size:18px; line-height:1.55; color:#C9C5E0">Tell us about your venture or your art, and subscribe so you never miss an edition.</p>
+      <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:20px">
+        <a href="https://eureqa.beehiiv.com/subscribe" target="_blank" rel="noopener" style-hover="transform:translate(-3px,-3px); box-shadow:7px 7px 0 #C4A6D1" style="text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 30px; border:2px solid #C4A6D1; box-shadow:4px 4px 0 #C4A6D1; transition:transform 0.12s ease, box-shadow 0.12s ease">Subscribe free</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdd27vZBDtVwNfMhxOEBQ77yZwiah5tPThF8XiuwHjj23IHsg/viewform" target="_blank" rel="noopener" style-hover="background:#3E3B6E" style="text-decoration:none; color:#FAF7F2; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 26px; border:2px solid #C4A6D1; background:transparent; transition:background 0.12s ease">Get featured ↗︎</a>
+        <a href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373" target="_blank" rel="noopener" style-hover="background:#3E3B6E" style="text-decoration:none; color:#FAF7F2; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 26px; border:2px solid #C4A6D1; background:transparent; transition:background 0.12s ease">WhatsApp ↗︎</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer data-screen-label="Footer" style="background:#2B2950; color:#C9C5E0; border-top:2px solid #C4A6D1">
+    <div style="max-width:1280px; margin:0 auto; padding:48px 32px 36px">
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:24px; padding-bottom:28px; border-bottom:1px solid #4A4770">
+        <a href="index.html" style="text-decoration:none; font-weight:900; font-size:32px; letter-spacing:-0.03em; color:#FAF7F2; line-height:1">eureqa<span style="color:#C4A6D1">!</span></a>
+        <div style="display:flex; flex-wrap:wrap; gap:24px">
+          <a data-eq-icon="1" href="https://www.linkedin.com/company/eureqa-newsletter" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex; width:42px; height:42px; align-items:center; justify-content:center; color:#C9C5E0; border:1px solid #4A4770; border-radius:12px; text-decoration:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.23 0z"></path></svg></a>
+          <a data-eq-icon="1" href="https://www.instagram.com/eureqa.newsletter/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex; width:42px; height:42px; align-items:center; justify-content:center; color:#C9C5E0; border:1px solid #4A4770; border-radius:12px; text-decoration:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.4" y="2.4" width="19.2" height="19.2" rx="5.2" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg></a>
+          <a data-eq-icon="1" href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373?utm_campaign=eureqa-crosscurrents&amp;utm_medium=referral&amp;utm_source=eureqa%21.uk" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:inline-flex; width:42px; height:42px; align-items:center; justify-content:center; color:#C9C5E0; border:1px solid #4A4770; border-radius:12px; text-decoration:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.37l-.36-.22-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"></path></svg></a>
+          <a data-eq-subbtn="1" href="https://eureqa.beehiiv.com/subscribe" target="_blank" rel="noopener" style="display:inline-flex; height:42px; box-sizing:border-box; align-items:center; padding:0 20px; border:1px solid #4A4770; border-radius:12px; color:#C9C5E0; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none">Subscribe</a>
+          <a href="https://www.linkedin.com/company/eureqa-newsletter" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:13px; font-weight:600">LinkedIn ↗︎</a>
+          <a href="https://www.instagram.com/eureqa.newsletter/" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:13px; font-weight:600">Instagram ↗︎</a>
+          <a href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:13px; font-weight:600">WhatsApp ↗︎</a>
+          <a href="https://eureqa.beehiiv.com/subscribe" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:13px; font-weight:600">Subscribe ↗︎</a>
+        </div>
+      </div>
+      <div data-eq-legal="1" style="display:flex; flex-wrap:wrap; justify-content:flex-end; gap:20px; padding-top:16px">
+        <a href="Legal.dc.html#terms" style-hover="color:#FAF7F2" style="text-decoration:none; color:#8B87B5; font-size:12.5px; font-weight:600">Terms of Use</a>
+        <a href="Legal.dc.html#privacy" style-hover="color:#FAF7F2" style="text-decoration:none; color:#8B87B5; font-size:12.5px; font-weight:600">Privacy Policy</a>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; padding-top:20px; font-size:13px; color:#8B87B5">
+        <span>© 2026 eureqa! — Real insights beyond pitch decks.</span>
+        <span>Publisher: Leonard Ulrich · Editor in Chief: Lauren Manby</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { ready: false };
+
+  componentDidMount() {
+    this._poll = setInterval(() => {
+      const E = window.EUREQA && window.EUREQA.editions;
+      if (E && E['april-fools'] && E['momentum'] && E['the-glow-up'] && E['crosscurrents'] && E['europe-maxxing']) {
+        clearInterval(this._poll);
+        this.setState({ ready: true }, () => this._scrollToHash());
+      }
+    }, 40);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._poll);
+  }
+
+  _slug() {
+    const p = new URLSearchParams(window.location.search).get('e');
+    const E = (window.EUREQA && window.EUREQA.editions) || {};
+    return E[p] ? p : 'europe-maxxing';
+  }
+
+  _scrollToHash(hash) {
+    const h = (hash || window.location.hash).replace('#', '');
+    if (!h) return;
+    setTimeout(() => {
+      const el = document.getElementById(h);
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 84;
+        window.scrollTo({ top, behavior: 'auto' });
+      }
+    }, 80);
+  }
+
+  // Inline parser: **bold**, *italic*, [text](url)
+  _inline(text, keyBase) {
+    const out = [];
+    let rest = text, k = 0;
+    const rx = /\*\*([^*]+)\*\*|\*([^*]+)\*|\[([^\]]+)\]\(([^)]+)\)/;
+    while (rest.length) {
+      const m = rest.match(rx);
+      if (!m) { out.push(rest); break; }
+      if (m.index > 0) out.push(rest.slice(0, m.index));
+      const key = keyBase + '-' + (k++);
+      if (m[1] !== undefined) {
+        out.push(React.createElement('strong', { key, style: { fontWeight: 600, color: '#2B2950' } }, m[1]));
+      } else if (m[2] !== undefined) {
+        out.push(React.createElement('em', { key }, m[2]));
+      } else {
+        out.push(React.createElement('a', {
+          key, href: m[4], target: '_blank', rel: 'noopener',
+          style: { color: '#8E1230', textDecorationColor: '#C4A6D1', textUnderlineOffset: '3px' }
+        }, m[3]));
+      }
+      rest = rest.slice(m.index + m[0].length);
+    }
+    return out;
+  }
+
+  _body(blocks, secId) {
+    const els = [];
+    blocks.forEach((b, i) => {
+      const key = secId + '-b' + i;
+      if (b.t === 'p') {
+        els.push(React.createElement('p', {
+          key, style: { margin: '0 0 22px', fontFamily: "'Newsreader',serif", fontSize: '18.5px', lineHeight: 1.65, color: '#3E3B63' }
+        }, this._inline(b.x, key)));
+      } else if (b.t === 'img') {
+        els.push(React.createElement('figure', { key, style: { margin: '32px 0' } },
+          React.createElement('img', { src: b.src, alt: b.cap || '', loading: 'lazy', style: { display: 'block', width: '100%', border: '2px solid #2B2950', boxSizing: 'border-box', background: '#EFE6F4' } }),
+          b.cap ? React.createElement('figcaption', { style: { marginTop: '10px', fontFamily: "'Newsreader',serif", fontStyle: 'italic', fontSize: '14.5px', color: '#6B688F' } }, b.cap) : null
+        ));
+      } else if (b.t === 'callout') {
+        els.push(React.createElement('div', { key, style: { position: 'relative', margin: '38px 0 28px', background: '#8E1230', border: '2px solid #2B2950', borderRadius: '14px', boxShadow: '6px 6px 0 #C4A6D1', padding: '30px 28px 28px' } },
+          React.createElement('div', { style: { position: 'absolute', top: '-17px', right: '16px', transform: 'rotate(5deg)', background: '#C4A6D1', color: '#2B2950', fontFamily: "'Caveat',cursive", fontWeight: 700, fontSize: '22px', lineHeight: 1, padding: '8px 16px 11px', borderRadius: '14px 10px 16px 10px', border: '2px solid #2B2950', boxShadow: '0 8px 18px rgba(43,41,80,0.24)' } }, 'big giveaway!'),
+          React.createElement('div', { style: { fontSize: '11px', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#C4A6D1' } }, 'eureqa! \u00D7 Intervyo \u00B7 for our readers'),
+          React.createElement('div', { style: { fontFamily: "'Archivo',sans-serif", fontWeight: 900, fontSize: '27px', letterSpacing: '-0.02em', lineHeight: 1.08, color: '#FAF7F2', marginTop: '10px' } }, 'Spin the wheel. Everyone wins.'),
+          React.createElement('p', { style: { margin: '12px 0 22px', fontFamily: "'Newsreader',serif", fontSize: '17.5px', lineHeight: 1.6, color: '#EFD9DF' } }, b.x),
+          React.createElement('a', { href: b.url, target: '_blank', rel: 'noopener', style: { display: 'inline-block', textDecoration: 'none', background: '#FAF7F2', color: '#2B2950', fontSize: '13px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '15px 28px', borderRadius: '10px', boxShadow: '0 8px 18px rgba(43,41,80,0.28)' } }, (b.cta || 'Give it a try') + ' \u2197\uFE0E')
+        ));
+      } else if (b.t === 'q') {
+        els.push(React.createElement('p', {
+          key, style: { margin: '30px 0 12px', fontFamily: "'Archivo',sans-serif", fontWeight: 700, fontSize: '17px', lineHeight: 1.5, color: '#35325E' }
+        }, b.who + ': \u201C' + b.x + '\u201D'));
+      } else if (b.t === 'a') {
+        els.push(React.createElement('div', { key, style: { margin: '0 0 22px', paddingLeft: '18px', borderLeft: '3px solid #C4A6D1' } },
+          React.createElement('p', { style: { margin: 0, fontFamily: "'Newsreader',serif", fontSize: '18px', lineHeight: 1.65, color: '#3E3B63' } }, this._inline(b.x, key))
+        ));
+      }
+    });
+    return React.createElement('div', null, els);
+  }
+
+  renderVals() {
+    if (!this.state.ready) return { ready: false };
+    const slug = this._slug();
+    const E = window.EUREQA.editions;
+    const ed = E[slug];
+    const order = ['april-fools', 'momentum', 'the-glow-up', 'crosscurrents', 'europe-maxxing'];
+    const idx = order.indexOf(slug);
+    const prev = idx > 0 ? E[order[idx - 1]] : null;
+    const next = idx < order.length - 1 ? E[order[idx + 1]] : null;
+
+    document.title = 'eureqa! \u2014 ' + ed.title;
+
+    const TAGS = {
+      note: { bg: '#35325E', fg: '#FAF7F2' },
+      startup: { bg: '#C4A6D1', fg: '#2B2950' },
+      artist: { bg: '#FAF7F2', fg: '#8E1230' },
+      interview: { bg: '#8E1230', fg: '#FAF7F2' }
+    };
+
+    const sections = ed.sections.map((s) => ({
+      id: s.id,
+      label: s.label,
+      title: s.title,
+      uni: s.uni || '',
+      bylineName: s.byline.name + (s.byline.role ? ' (' + s.byline.role + ')' : ''),
+      bylineUrl: s.byline.url,
+      hasLinks: s.links && s.links.length > 0,
+      links: s.links || [],
+      tagBg: (TAGS[s.kind] || TAGS.startup).bg,
+      tagFg: (TAGS[s.kind] || TAGS.startup).fg,
+      bodyEl: this._body(s.body, s.id)
+    }));
+
+    const toc = ed.sections.map((s) => ({
+      label: s.kind === 'note' ? "Editors' Notes" : s.title,
+      href: '#' + s.id,
+      onJump: (e) => { e.preventDefault(); history.replaceState(null, '', '#' + s.id); this._scrollToHash('#' + s.id); }
+    }));
+
+    return {
+      ready: true,
+      number: ed.number,
+      title: ed.title,
+      titleFit: ed.title.length >= 14 ? '1' : '',
+      month: ed.month,
+      read: ed.read,
+      dek: ed.dek,
+      artStyle: {
+        position: 'relative', display: 'block', width: '100%', aspectRatio: '4/5',
+        backgroundImage: 'url("' + ed.art + '")', backgroundSize: 'cover', backgroundPosition: 'center',
+        border: '2px solid #2B2950', backgroundColor: '#FAF7F2', boxSizing: 'border-box'
+      },
+      artistName: ed.artist.name,
+      artistUrl: ed.artist.url,
+      toc,
+      sections,
+      hasPrev: !!prev,
+      prevHref: prev ? 'Edition.dc.html?e=' + prev.slug : '#',
+      prevTitle: prev ? 'N°' + prev.number + ' · ' + prev.title : '',
+      hasNext: !!next,
+      nextHref: next ? 'Edition.dc.html?e=' + next.slug : '#',
+      nextTitle: next ? 'N°' + next.number + ' · ' + next.title : ''
+    };
+  }
+}
+</script>
+</body>
+</html>

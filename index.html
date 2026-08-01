@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>eureqa! — Real insights beyond pitch decks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&amp;family=Caveat:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; padding: 0; background: #FAF7F2; }
+    ::selection { background: #C4A6D1; color: #2B2950; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    summary::-webkit-details-marker { display: none; }
+    header details[data-eq-burger] { display: none; }
+    span[data-eq-mob] { display: none; }
+    /* ---- mobile only: desktop stays untouched ---- */
+    @media (max-width: 900px) {
+      body { overflow-x: hidden; }
+      header > div { height: 62px !important; padding: 0 18px !important; }
+      header nav { gap: 12px !important; }
+      header nav > a[href$=".dc.html"], header nav > a[href="index.html"] { display: none !important; }
+      header nav > a[target="_blank"] { font-size: 11px !important; height: 44px !important; padding: 0 16px !important; box-sizing: border-box !important; display: inline-flex !important; align-items: center !important; }
+      header details[data-eq-burger] { display: block; position: relative; }
+      section[data-screen-label="Hero"] > div:last-child { grid-template-columns: 1fr !important; gap: 0 !important; padding: 56px 24px calc(min(300px, 78vw) * 1.25 + 185px) !important; }
+      section[data-screen-label="Hero"] > div:last-child > div:first-child { text-align: center; }
+      section[data-screen-label="Hero"] > div:last-child > div:first-child p { margin-left: auto !important; margin-right: auto !important; }
+      section[data-screen-label="Hero"] > div:last-child > div:first-child > div:last-child { flex-direction: column !important; align-items: center !important; gap: 12px !important; }
+      section[data-screen-label="Hero"] > div:last-child > div:first-child > div:last-child > a { width: min(300px, 80vw) !important; box-sizing: border-box !important; text-align: center !important; padding: 16px 10px !important; }
+      section[data-screen-label="Hero"] > div:last-child > div:first-child > div:last-child > a[href*="whatsapp"] { padding: 14px 10px !important; }
+      section[data-screen-label="Hero"] > div:last-child > div:last-child { display: none !important; }
+      span[data-eq-desk] { display: none !important; }
+      span[data-eq-mob] { display: inline !important; }
+      section[data-screen-label="Latest edition"] > div:first-child { flex-wrap: wrap !important; row-gap: 6px !important; }
+      section[data-screen-label="Latest edition"] > div:last-child { grid-template-columns: 1fr !important; gap: 36px !important; }
+      section[data-screen-label="All editions"] > div > div:first-child { flex-wrap: wrap !important; row-gap: 8px !important; }
+      section[data-screen-label="Events sneak peek"] > div { grid-template-columns: 1fr !important; gap: 44px !important; }
+    }
+    @keyframes eqMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (max-width: 900px) {
+      header nav > a[target="_blank"] { height: 30px !important; padding: 0 12px !important; font-size: 10px !important; }
+      header details[data-eq-burger] summary { width: 30px !important; height: 30px !important; padding: 7px 6px !important; gap: 3px !important; border-radius: 8px !important; }
+      footer div[data-eq-legal] { justify-content: center !important; }
+      header > div > a > span { color: #C4A6D1 !important; }
+      footer a[href*="linkedin.com"]:not([data-eq-icon]), footer a[href*="instagram.com"]:not([data-eq-icon]), footer a[href*="chat.whatsapp.com"]:not([data-eq-icon]) { display: none !important; }
+      footer a[data-eq-icon] { display: inline-flex !important; }
+      footer div[data-eq-icons] { display: flex !important; gap: 12px; }
+      footer > div > div:first-child > div:last-child > div:first-child { display: none !important; }
+      footer > div > div:last-child > span:last-child { display: none !important; }
+      footer > div > div:last-child > span:first-child { font-weight: 600 !important; }
+      section[data-screen-label="Latest edition"] a[href$="#intervyo"] > span:first-child > span, section[data-screen-label="Latest edition"] a[href$="#closette"] > span:first-child > span, section[data-screen-label="Latest edition"] a[href$="#hello-trust"] > span:first-child > span, section[data-screen-label="Latest edition"] a[href$="#cheb-clothing"] > span:first-child > span, section[data-screen-label="Latest edition"] a[href$="#teo-geoghegan"] > span:first-child > span { display: block; margin-top: 2px; }
+      section[data-screen-label="Events sneak peek"] > div > div:last-child { gap: 10px !important; }
+      section[data-screen-label="Events sneak peek"] > div > div:last-child > div { background: transparent !important; box-shadow: none !important; padding: 0 !important; border-radius: 0 !important; font-size: 27px !important; }
+      section[data-screen-label="Events sneak peek"] > div > div:last-child > div:nth-child(1) { color: #35325E !important; }
+      section[data-screen-label="Events sneak peek"] > div > div:last-child > div:nth-child(2) { color: #8E1230 !important; }
+      section[data-screen-label="Events sneak peek"] > div > div:last-child > div:nth-child(3) { color: #4A4770 !important; }
+      section[data-screen-label="Events sneak peek"] span[data-eq-brk] { display: block; }
+    }
+  </style>
+</helmet>
+
+<div style="min-height:100vh; background:#FAF7F2; color:#2B2950; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased">
+
+  <!-- ================= HEADER ================= -->
+  <header data-screen-label="Header" style="position:sticky; top:0; z-index:50; background:rgba(250,247,242,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #D8D2E8">
+    <div style="max-width:1320px; margin:0 auto; padding:0 32px; height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px">
+      <a href="index.html" style="text-decoration:none; color:#2B2950; font-weight:900; font-size:30px; letter-spacing:-0.03em; line-height:1">eureqa<span style="color:#C4A6D1">!</span></a>
+      <nav style="display:flex; align-items:center; gap:26px">
+        <a href="index.html" style="text-decoration:none; color:#8E1230; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; border-bottom:2px solid #8E1230; padding-bottom:2px">Home</a>
+        <a href="Archive.dc.html" style-hover="color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding-bottom:2px">Archive</a>
+        <a href="Features.dc.html" style-hover="color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding-bottom:2px">Features</a>
+        <a href="Events.dc.html" style-hover="color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding-bottom:2px">Events</a>
+        <a href="About.dc.html" style-hover="color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding-bottom:2px">About</a>
+        <a href="https://eureqa.beehiiv.com/subscribe" target="_blank" rel="noopener" style-hover="transform:translateY(-2px); box-shadow:0 8px 20px rgba(142,18,48,0.3)" style="text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:12px 22px; border-radius:9px; transition:transform 0.15s ease, box-shadow 0.15s ease">Subscribe</a>
+        <details data-eq-burger="1">
+          <summary aria-label="Menu" style="list-style:none; display:flex; flex-direction:column; justify-content:center; gap:4px; width:44px; height:44px; padding:12px; box-sizing:border-box; border:2px solid #2B2950; border-radius:9px; cursor:pointer; -webkit-tap-highlight-color:transparent">
+            <span style="display:block; height:2px; background:#2B2950; border-radius:2px"></span>
+            <span style="display:block; height:2px; background:#2B2950; border-radius:2px"></span>
+            <span style="display:block; height:2px; background:#2B2950; border-radius:2px"></span>
+          </summary>
+          <div style="position:absolute; right:0; top:calc(100% + 12px); min-width:210px; background:#FAF7F2; border:1px solid #D8D2E8; border-radius:14px; box-shadow:0 18px 40px rgba(43,41,80,0.2); padding:10px; display:grid; gap:2px; z-index:70">
+            <a href="index.html" style="text-decoration:none; color:#8E1230; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">Home</a>
+            <a href="Archive.dc.html" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">Archive</a>
+            <a href="Features.dc.html" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">Features</a>
+            <a href="Events.dc.html" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">Events</a>
+            <a href="About.dc.html" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 14px; border-radius:9px">About</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section data-screen-label="Hero" style="position:relative; overflow:hidden; border-bottom:1px solid #D8D2E8">
+
+    <!-- collage: every photo from every edition, drifting left in a slow carousel (built by the logic class) -->
+    {{ collage }}
+
+    <!-- hero content -->
+    <div style="position:relative; max-width:1320px; margin:0 auto; padding:118px 32px 136px; display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:60px; align-items:center">
+      <div>
+        <div style="display:inline-block; transform:rotate(-2.5deg); background:#C4A6D1; color:#2B2950; font-family:'Caveat',cursive; font-weight:700; font-size:22px; line-height:1; padding:9px 17px 12px; border-radius:14px 10px 16px 10px; box-shadow:0 8px 18px rgba(43,41,80,0.16); margin-bottom:26px">the student innovation magazine</div>
+        <h1 style="margin:0 0 22px; font-weight:900; font-size:clamp(48px,5.8vw,85px); line-height:0.96; letter-spacing:-0.035em; color:#35325E; text-wrap:balance">Real insights beyond pitch&nbsp;decks<span style="color:#8E1230">.</span></h1>
+        <p style="margin:0 0 34px; max-width:50ch; font-family:'Newsreader',serif; font-size:18.5px; line-height:1.55; color:#4A4770">We share the stories of the startups, artists, and risk-takers shaping Oxford, Cambridge, LSE, Imperial, UCL, LBS and KCL.</p>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:15px">
+          <a href="https://eureqa.beehiiv.com/subscribe" target="_blank" rel="noopener" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(142,18,48,0.32)" style="text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:14.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:18px 34px; border-radius:11px; transition:transform 0.15s ease, box-shadow 0.15s ease">Subscribe  (it's free)</a>
+          <a href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373" target="_blank" rel="noopener" style-hover="background:#EFE6F4; transform:translateY(-2px)" style="text-decoration:none; color:#2B2950; font-size:14.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 29px; border:2px solid #2B2950; border-radius:11px; background:rgba(250,247,242,0.85); transition:background 0.15s ease, transform 0.15s ease"><span data-eq-desk="1">Join the WhatsApp community ↗︎</span><span data-eq-mob="1">Join the community ↗︎</span></a>
+        </div>
+      </div>
+      <div style="position:relative; justify-self:end; width:min(100%,368px); margin-right:52px">
+        <a href="Edition.dc.html?e=europe-maxxing" style-hover="transform:rotate(0deg) translateY(-6px)" style="display:block; text-decoration:none; color:#2B2950; background:#FFFFFF; padding:12px 12px 15px; border-radius:7px; box-shadow:0 24px 50px rgba(43,41,80,0.24); transform:rotate(2deg); transition:transform 0.2s ease">
+          <img src="assets/img/europe-maxxing-art.jpeg" alt="Europe-Maxxing cover art by Anna Riley" style="display:block; width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:4px; background:#EFE6F4">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:12px; padding:0 3px">
+            <span style="font-size:11.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase">N°05 | Europe-Maxxing</span>
+            <span style="font-family:'Caveat',cursive; font-weight:600; font-size:17px; color:#6B688F">art by Anna Riley</span>
+          </div>
+        </a>
+        <div style="position:absolute; top:-15px; right:-12px; transform:rotate(8deg); background:#8E1230; color:#FAF7F2; font-family:'Caveat',cursive; font-weight:700; font-size:20px; line-height:1; padding:8px 17px 11px; border-radius:14px 10px 16px 10px; box-shadow:0 8px 18px rgba(43,41,80,0.24)">out now!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TICKER ================= -->
+  <sc-if value="{{ showTicker }}" hint-placeholder-val="{{ true }}">
+    <div data-screen-label="University ticker" style="background:#8E1230; overflow:hidden; padding:15px 0">
+      <div id="eqTickerStrip" style="display:flex; width:max-content; animation:eqMarquee 80s linear infinite">
+        <div style="display:flex; align-items:center; gap:34px; padding-right:34px; white-space:nowrap; color:#FAF7F2; font-size:13px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase">
+          <img src="assets/logos/oxford.svg" alt="University of Oxford" style="display:block; width:38px; height:48px"><span>✳︎</span>
+          <img src="assets/logos/cambridge.svg" alt="University of Cambridge" style="display:block; width:39px; height:45px"><span>✳︎</span>
+          <img src="assets/logos/lse.svg" alt="LSE" style="display:block; width:37px; height:37px"><span>✳︎</span>
+          <img src="assets/logos/imperial.svg" alt="Imperial College London" style="display:block; width:101px; height:28px"><span>✳︎</span>
+          <img src="assets/logos/ucl.svg" alt="UCL" style="display:block; width:107px; height:30px"><span>✳︎</span>
+          <img src="assets/logos/lbs.svg" alt="London Business School" style="display:block; width:44px; height:44px"><span>✳︎</span>
+          <img src="assets/logos/kcl.svg" alt="King's College London" style="display:block; width:57px; height:44px"><span>✳︎</span>
+          <span>Real insights beyond pitch decks</span><span>✳︎</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:34px; padding-right:34px; white-space:nowrap; color:#FAF7F2; font-size:13px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase">
+          <img src="assets/logos/oxford.svg" alt="University of Oxford" style="display:block; width:38px; height:48px"><span>✳︎</span>
+          <img src="assets/logos/cambridge.svg" alt="University of Cambridge" style="display:block; width:39px; height:45px"><span>✳︎</span>
+          <img src="assets/logos/lse.svg" alt="LSE" style="display:block; width:37px; height:37px"><span>✳︎</span>
+          <img src="assets/logos/imperial.svg" alt="Imperial College London" style="display:block; width:101px; height:28px"><span>✳︎</span>
+          <img src="assets/logos/ucl.svg" alt="UCL" style="display:block; width:107px; height:30px"><span>✳︎</span>
+          <img src="assets/logos/lbs.svg" alt="London Business School" style="display:block; width:44px; height:44px"><span>✳︎</span>
+          <img src="assets/logos/kcl.svg" alt="King's College London" style="display:block; width:57px; height:44px"><span>✳︎</span>
+          <span>Real insights beyond pitch decks</span><span>✳︎</span>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ================= LATEST EDITION ================= -->
+  <section data-screen-label="Latest edition" style="max-width:1320px; margin:0 auto; padding:96px 32px">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; border-bottom:1px solid #D8D2E8; padding-bottom:18px; margin-bottom:52px">
+      <h2 style="margin:0; font-weight:900; font-size:clamp(34px,3.6vw,52px); letter-spacing:-0.03em; color:#35325E">The latest edition</h2>
+      <span style="font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8E1230">August 2026</span>
+    </div>
+    <div style="display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:64px; align-items:start">
+      <a href="Edition.dc.html?e=europe-maxxing" style-hover="transform:translateY(-6px)" style="display:block; text-decoration:none; transition:transform 0.2s ease">
+        <img src="assets/img/europe-maxxing-cover.jpeg" alt="eureqa! Europe-Maxxing cover" style="display:block; width:100%; border-radius:10px; border:1px solid #D8D2E8; box-shadow:0 18px 40px rgba(43,41,80,0.16); background:#EFE6F4">
+      </a>
+      <div>
+        <div style="font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8E1230; margin-bottom:14px">N°05 | Europe-Maxxing</div>
+        <h3 style="margin:0 0 16px; font-weight:800; font-size:clamp(28px,2.8vw,40px); letter-spacing:-0.02em; color:#35325E; line-height:1.05">Out of office, unapologetically.</h3>
+        <p style="margin:0 0 32px; font-family:'Newsreader',serif; font-size:19px; line-height:1.55; color:#4A4770; max-width:56ch">Europe-Maxxing began as a caricature of the “lazy” European worker who logs off at five. This month's founders flip it: stepping back in summer to reflect, recalibrate and see the bigger picture is the real superpower of the European founder.</p>
+        <div style="display:grid; gap:0; border-top:1px solid #D8D2E8; margin-bottom:36px">
+          <a href="Edition.dc.html?e=europe-maxxing#intervyo" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
+            <span style="font-weight:700; font-size:17px">Intervyo <span style="font-weight:500; color:#6B688F">— Jamie Fairey</span></span>
+            <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">Royal Holloway</span>
+          </a>
+          <a href="Edition.dc.html?e=europe-maxxing#closette" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
+            <span style="font-weight:700; font-size:17px">Closette <span style="font-weight:500; color:#6B688F">— Claudia Pipis</span></span>
+            <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">UCL</span>
+          </a>
+          <a href="Edition.dc.html?e=europe-maxxing#hello-trust" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
+            <span style="font-weight:700; font-size:17px">HELLO Trust <span style="font-weight:500; color:#6B688F">— Casso Pi</span></span>
+            <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">LSE</span>
+          </a>
+          <a href="Edition.dc.html?e=europe-maxxing#cheb-clothing" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
+            <span style="font-weight:700; font-size:17px">Cheb Clothing <span style="font-weight:500; color:#6B688F">— Salman Sultan</span></span>
+            <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">LSE</span>
+          </a>
+          <a href="Edition.dc.html?e=europe-maxxing#teo-geoghegan" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
+            <span style="font-weight:700; font-size:17px">Artist of the Month <span style="font-weight:500; color:#6B688F">— Teo Geoghegan</span></span>
+            <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">Music</span>
+          </a>
+        </div>
+        <a href="Edition.dc.html?e=europe-maxxing" style-hover="background:#EFE6F4; transform:translateY(-2px)" style="display:inline-block; text-decoration:none; background:transparent; color:#2B2950; font-size:14px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 30px; border:2px solid #2B2950; border-radius:11px; transition:background 0.15s ease, transform 0.15s ease">Read the edition →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ALL EDITIONS ================= -->
+  <section data-screen-label="All editions" style="background:#EFE6F4; border-top:1px solid #D8D2E8; border-bottom:1px solid #D8D2E8">
+    <div style="max-width:1320px; margin:0 auto; padding:88px 32px">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:48px">
+        <h2 style="margin:0; font-weight:900; font-size:clamp(34px,3.6vw,52px); letter-spacing:-0.03em; color:#35325E">Every edition</h2>
+        <a href="Archive.dc.html" style-hover="color:#8E1230; border-color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; border-bottom:2px solid #2B2950; padding-bottom:2px; transition:color 0.12s ease">Browse the archive →</a>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:36px; align-items:end">
+        <a href="Edition.dc.html?e=europe-maxxing" style-hover="transform:translateY(-6px)" style="text-decoration:none; color:#2B2950; display:block; text-align:center; transition:transform 0.2s ease">
+          <img src="assets/img/europe-maxxing-cover.jpeg" alt="Europe-Maxxing cover" style="display:block; width:100%; height:auto; border-radius:10px; border:1px solid #D8D2E8; background:#FAF7F2; box-shadow:0 14px 32px rgba(43,41,80,0.14)">
+          <div style="margin-top:16px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">N°05 · August 2026</div>
+          <div style="font-weight:800; font-size:20px; letter-spacing:-0.01em; margin-top:4px">Europe-Maxxing</div>
+        </a>
+        <a href="Edition.dc.html?e=crosscurrents" style-hover="transform:translateY(-6px)" style="text-decoration:none; color:#2B2950; display:block; text-align:center; transition:transform 0.2s ease">
+          <img src="assets/cover-crosscurrents.png" alt="Crosscurrents cover" style="display:block; width:100%; height:auto; border-radius:10px; border:1px solid #D8D2E8; background:#FAF7F2; box-shadow:0 14px 32px rgba(43,41,80,0.14)">
+          <div style="margin-top:16px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">N°04 · July 2026</div>
+          <div style="font-weight:800; font-size:20px; letter-spacing:-0.01em; margin-top:4px">Crosscurrents</div>
+        </a>
+        <a href="Edition.dc.html?e=the-glow-up" style-hover="transform:translateY(-6px)" style="text-decoration:none; color:#2B2950; display:block; text-align:center; transition:transform 0.2s ease">
+          <img src="assets/cover-the-glow-up.jpeg" alt="The Glow Up cover" style="display:block; width:100%; height:auto; border-radius:10px; border:1px solid #D8D2E8; background:#FAF7F2; box-shadow:0 14px 32px rgba(43,41,80,0.14)">
+          <div style="margin-top:16px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">N°03 · June 2026</div>
+          <div style="font-weight:800; font-size:20px; letter-spacing:-0.01em; margin-top:4px">The Glow Up</div>
+        </a>
+        <a href="Edition.dc.html?e=momentum" style-hover="transform:translateY(-6px)" style="text-decoration:none; color:#2B2950; display:block; text-align:center; transition:transform 0.2s ease">
+          <img src="assets/cover-momentum.jpeg" alt="Momentum cover" style="display:block; width:100%; height:auto; border-radius:10px; border:1px solid #D8D2E8; background:#FAF7F2; box-shadow:0 14px 32px rgba(43,41,80,0.14)">
+          <div style="margin-top:16px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">N°02 · May 2026</div>
+          <div style="font-weight:800; font-size:20px; letter-spacing:-0.01em; margin-top:4px">Momentum</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES TEASER ================= -->
+  <section data-screen-label="Features teaser" style="max-width:1320px; margin:0 auto; padding:96px 32px">
+    <div style="font-size:12px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8E1230; margin-bottom:16px">In the pages of eureqa!</div>
+    <h2 style="margin:0 0 48px; font-weight:900; font-size:clamp(34px,3.6vw,52px); letter-spacing:-0.03em; color:#35325E; max-width:20ch">Everyone we've ever featured, in one place.</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:28px">
+      <a href="Features.dc.html#startups" style-hover="transform:translateY(-5px); box-shadow:0 18px 38px rgba(43,41,80,0.2)" style="text-decoration:none; color:#2B2950; background:#C4A6D1; border-radius:14px; padding:32px 28px 28px; box-shadow:0 10px 26px rgba(43,41,80,0.12); transition:transform 0.15s ease, box-shadow 0.15s ease">
+        <div style="font-weight:900; font-size:56px; letter-spacing:-0.03em; line-height:1; color:#35325E">18</div>
+        <div style="font-weight:800; font-size:22px; letter-spacing:-0.01em; margin-top:10px; text-transform:uppercase">Startups</div>
+        <p style="margin:12px 0 0; font-family:'Newsreader',serif; font-size:16px; line-height:1.5; color:#3E3B63">From autonomous drones to trading footballers like stocks.</p>
+      </a>
+      <a href="Features.dc.html#artists" style-hover="transform:translateY(-5px); box-shadow:0 18px 38px rgba(43,41,80,0.2)" style="text-decoration:none; color:#2B2950; background:#C4A6D1; border-radius:14px; padding:32px 28px 28px; box-shadow:0 10px 26px rgba(43,41,80,0.12); transition:transform 0.15s ease, box-shadow 0.15s ease">
+        <div style="font-weight:900; font-size:56px; letter-spacing:-0.03em; line-height:1; color:#35325E">4</div>
+        <div style="font-weight:800; font-size:22px; letter-spacing:-0.01em; margin-top:10px; text-transform:uppercase">Artists</div>
+        <p style="margin:12px 0 0; font-family:'Newsreader',serif; font-size:16px; line-height:1.5; color:#3E3B63">Every Artist of the Month: songwriters, DJs, photographers.</p>
+      </a>
+      <a href="Features.dc.html#interviews" style-hover="transform:translateY(-5px); box-shadow:0 18px 38px rgba(43,41,80,0.2)" style="text-decoration:none; color:#2B2950; background:#C4A6D1; border-radius:14px; padding:32px 28px 28px; box-shadow:0 10px 26px rgba(43,41,80,0.12); transition:transform 0.15s ease, box-shadow 0.15s ease">
+        <div style="font-weight:900; font-size:56px; letter-spacing:-0.03em; line-height:1; color:#35325E">2</div>
+        <div style="font-weight:800; font-size:22px; letter-spacing:-0.01em; margin-top:10px; text-transform:uppercase">Interviews</div>
+        <p style="margin:12px 0 0; font-family:'Newsreader',serif; font-size:16px; line-height:1.5; color:#3E3B63">Long conversations with the people who've been there.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= EVENTS SNEAK PEEK ================= -->
+  <section data-screen-label="Events sneak peek" style="background:#EFE6F4; border-top:1px solid #D8D2E8; border-bottom:1px solid #D8D2E8">
+    <div style="max-width:1320px; margin:0 auto; padding:88px 32px; display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:56px; align-items:center">
+      <div>
+        <div style="font-size:12px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8E1230; margin-bottom:16px">Beyond the page</div>
+        <h2 style="margin:0 0 18px; font-weight:900; font-size:clamp(34px,3.6vw,52px); letter-spacing:-0.03em; color:#35325E; max-width:22ch">The magazine is monthly. <span data-eq-brk="1">The community meets in between.</span></h2>
+        <p style="margin:0 0 36px; max-width:52ch; font-family:'Newsreader',serif; font-size:19px; line-height:1.55; color:#4A4770">The first eureqa! gathering is currently in the works: founders, artists and readers from all seven universities in one room. <br>Our partner event board is warming up too.</p>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:15px">
+          <a href="Events.dc.html" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(142,18,48,0.32)" style="text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 30px; border-radius:11px; transition:transform 0.15s ease, box-shadow 0.15s ease">Explore events →</a>
+          <a href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373" target="_blank" rel="noopener" style-hover="background:#FAF7F2; transform:translateY(-2px)" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:14px 24px; border:2px solid #2B2950; border-radius:11px; background:transparent; transition:background 0.15s ease, transform 0.15s ease">Hear it first on WhatsApp ↗︎</a>
+        </div>
+      </div>
+      <div style="justify-self:center; display:grid; gap:16px; max-width:330px">
+        <div style="transform: rotate(3deg); background: #35325E; color: #EFE6F4; font-family: 'Caveat',cursive; font-weight: 600; font-size: 22px; line-height: 1.2; padding: 16px 22px; border-radius: 12px 16px 12px 10px; box-shadow: 0 10px 22px rgba(43,41,80,0.2); text-align: center">✷ people, prizes, pints ✷</div>
+        <div style="transform:rotate(-2deg); background:#C4A6D1; color:#2B2950; font-family:'Caveat',cursive; font-weight:600; font-size:22px; line-height:1.2; padding:16px 22px; border-radius:16px 10px 14px 12px; box-shadow:0 10px 22px rgba(43,41,80,0.2); justify-self:end">meet the founders you've read about</div>
+        <div style="transform: rotate(2deg); background: #8E1230; color: #FAF7F2; font-family: 'Caveat',cursive; font-weight: 600; font-size: 22px; line-height: 1.2; padding: 16px 22px; border-radius: 10px 14px 10px 16px; box-shadow: 0 10px 22px rgba(43,41,80,0.2); text-align: center">London, UK, Europe</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SUBSCRIBE BAND ================= -->
+  <section data-screen-label="Subscribe band" style="background:#35325E">
+    <div style="max-width:1320px; margin:0 auto; padding:100px 32px; text-align:center">
+      <div style="font-size:12px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#C4A6D1; margin-bottom:20px">Once a month · Free · No fluff</div>
+      <h2 style="margin:0 auto 20px; max-width:18ch; font-weight:900; font-size:clamp(38px,4.5vw,64px); letter-spacing:-0.03em; line-height:1.02; color:#FAF7F2">Be part of the movement.</h2>
+      <p style="margin:0 auto 44px; max-width:48ch; font-family:'Newsreader',serif; font-size:19px; line-height:1.55; color:#C9C5E0">Real ventures, real people, real momentum: <br>delivered to your inbox on the first of every month.</p>
+      <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:20px">
+        <a href="https://eureqa.beehiiv.com/subscribe" target="_blank" rel="noopener" style-hover="transform:translateY(-2px); box-shadow:0 14px 30px rgba(0,0,0,0.35)" style="text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:14px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:18px 34px; border-radius:11px; transition:transform 0.15s ease, box-shadow 0.15s ease">Subscribe to eureqa!</a>
+        <a href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373" target="_blank" rel="noopener" style-hover="background:#3E3B6E; transform:translateY(-2px)" style="text-decoration:none; color:#FAF7F2; font-size:14px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 28px; border:2px solid #C4A6D1; border-radius:11px; background:transparent; transition:background 0.15s ease, transform 0.15s ease">WhatsApp community ↗︎</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer data-screen-label="Footer" style="background:#2B2950; color:#C9C5E0">
+    <div style="max-width:1320px; margin:0 auto; padding:64px 32px 40px">
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:48px; padding-bottom:48px; border-bottom:1px solid #4A4770">
+        <div style="max-width:360px">
+          <div style="font-weight:900; font-size:44px; letter-spacing:-0.03em; color:#FAF7F2; line-height:1">eureqa<span style="color:#C4A6D1">!</span></div>
+          <p style="margin:16px 0 0; font-family:'Newsreader',serif; font-size:16px; line-height:1.55">Celebrating student ventures and creativity across Oxford, Cambridge, LSE, Imperial, UCL, LBS and KCL.</p>
+        </div>
+        <div style="display:flex; gap:72px; flex-wrap:wrap">
+          <div style="display:grid; gap:12px; align-content:start">
+            <div style="font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8B87B5">Explore</div>
+            <a href="Archive.dc.html" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:14px; font-weight:600">Archive</a>
+            <a href="Features.dc.html" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:14px; font-weight:600">Features</a>
+            <a href="Events.dc.html" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:14px; font-weight:600">Events</a>
+            <a href="About.dc.html" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:14px; font-weight:600">About</a>
+          </div>
+          <div style="display:grid; gap:12px; align-content:start">
+            <div style="font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8B87B5">Follow</div>
+            <div data-eq-icons="1" style="display:none">
+              <a data-eq-icon="1" href="https://www.linkedin.com/company/eureqa-newsletter" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:none; width:42px; height:42px; align-items:center; justify-content:center; color:#C9C5E0; border:1px solid #4A4770; border-radius:12px; text-decoration:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.23 0z"></path></svg></a>
+              <a data-eq-icon="1" href="https://www.instagram.com/eureqa.newsletter/" target="_blank" rel="noopener" aria-label="Instagram" style="display:none; width:42px; height:42px; align-items:center; justify-content:center; color:#C9C5E0; border:1px solid #4A4770; border-radius:12px; text-decoration:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.4" y="2.4" width="19.2" height="19.2" rx="5.2" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg></a>
+              <a data-eq-icon="1" href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:none; width:42px; height:42px; align-items:center; justify-content:center; color:#C9C5E0; border:1px solid #4A4770; border-radius:12px; text-decoration:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.37l-.36-.22-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"></path></svg></a>
+            </div>
+            <a href="https://www.linkedin.com/company/eureqa-newsletter" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:14px; font-weight:600">LinkedIn ↗︎</a>
+            <a href="https://www.instagram.com/eureqa.newsletter/" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:14px; font-weight:600">Instagram ↗︎</a>
+            <a href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:14px; font-weight:600">WhatsApp ↗︎</a>
+          </div>
+          <div style="display:grid; gap:12px; align-content:start">
+            <div style="font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8B87B5">Take part</div>
+            <a href="https://eureqa.beehiiv.com/subscribe" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:14px; font-weight:600">Subscribe ↗︎</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdd27vZBDtVwNfMhxOEBQ77yZwiah5tPThF8XiuwHjj23IHsg/viewform" target="_blank" rel="noopener" style-hover="color:#FAF7F2" style="text-decoration:none; color:#C9C5E0; font-size:14px; font-weight:600">Get featured ↗︎</a>
+          </div>
+        </div>
+      </div>
+      <div data-eq-legal="1" style="display:flex; flex-wrap:wrap; justify-content:flex-end; gap:20px; padding-top:16px">
+        <a href="Legal.dc.html#terms" style-hover="color:#FAF7F2" style="text-decoration:none; color:#8B87B5; font-size:12.5px; font-weight:600">Terms of Use</a>
+        <a href="Legal.dc.html#privacy" style-hover="color:#FAF7F2" style="text-decoration:none; color:#8B87B5; font-size:12.5px; font-weight:600">Privacy Policy</a>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; padding-top:24px; font-size:13px; color:#8B87B5">
+        <span>© 2026 eureqa! — Real insights beyond pitch decks.</span>
+        <span>Publisher: Leonard Ulrich · Editor in Chief: Lauren Manby</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showTicker&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Landing page&quot;}}">
+class Component extends DCLogic {
+  // ---- data -------------------------------------------------------------
+  _init() {
+    if (this._inited) return;
+    this._inited = true;
+    const P = 'assets/img/';
+    const POOL = [
+      // April Fools
+      '74df54b7-6b49-49ff-a2bb-8e27dcfb0663__Bild_31.03.26_um_11.21.jpeg',
+      '13e399ff-6e67-4b67-a0b2-62bf778602a8__IMG_1764.png.jpg',
+      '0ebc4bf5-6890-425b-bb01-74b5c336c761__image.png.jpg',
+      'a413110f-d24f-46ee-86e3-d9176c4fe97c__Bild_31.03.26_um_01.11.jpeg',
+      '3f86ba20-a52f-420b-8322-2936ce05d25a__image.png.jpg',
+      '2dc047f4-19f0-41a6-b5fb-41ba8f1b3198__image.png.jpg',
+      '65b97b02-6afb-49c6-bcd9-1083656e79dd__image.png.jpg',
+      'df82f232-f63a-4609-904b-b4a4487d20be__image.png.jpg',
+      '61cb6724-b376-4feb-8d74-cf7a09cccdc6__image.png.jpg',
+      // Momentum
+      '7c5b5a18-4f73-4bbb-b4e0-2513e033c994__68660732-8839-4e6a-b9ad-93825e970fe3_2.jpeg',
+      'd143d06c-236a-4c28-a515-244e8daeaf93__Bild_30.04.26_um_23.34.jpeg',
+      '4f8a2254-65ad-4013-a73b-5eda7a0ae5c4__image.png',
+      '5971a0a7-ebe2-4235-8e5b-bc71a6528834__image.png.jpg',
+      '868aa66d-458d-481e-85ea-048ce87a39c6__image.jpeg',
+      '9a3f3204-3722-41b3-8d42-a2955499fff2__39A1FBF2-C006-41A6-B067-EE8CDA418A0C_1_201_a.jpeg',
+      'c28eb2d4-96d5-448d-a7df-9427fb78363e__image.png.jpg',
+      'f54ba2d6-d6a6-4a6e-bfbb-a24e66af21de__A1CE2307-85F8-4749-8250-0E7FA975EA37_1_201_a.jpeg',
+      '842304b2-3125-4f27-8b2e-dea811f3dc21__image.png',
+      'ad3b7479-c78a-4693-ab75-b8745b51e3f6__image.png.jpg',
+      '9fb89c65-63b9-4d05-8214-c016a54a31a3__A92E94D5-2688-450A-9722-AC68A897F9CF.jpeg',
+      // The Glow Up
+      'b6c89215-0c37-4473-81f9-0c36ab4d0da9__Bild_01.06.26_um_16.21.jpeg',
+      'b0d11e9b-ca2e-4891-a726-7c69df849ad8__Bild_01.06.26_um_14.45.jpeg',
+      '80716dc5-7b2f-4ce2-a5b0-ed90ffbba304__image.png',
+      'e777a14c-1430-4cbf-b37a-07a35b87492d__image.png.jpg',
+      'bc820a36-0c32-438b-86f7-2bc45e257e38__image.png.jpg',
+      '729f7420-a0ad-4bc8-a620-77242c5204b2__D6CB3C81-3023-4B88-AE54-369C92F5F108.png.jpg',
+      'c3bf1e11-547e-4948-a125-f480afb61938__C844814A-9C22-4674-99DC-B72E8CBC21C9.jpeg',
+      '3395ae06-16a7-48d1-bcc0-0455a1cf3577__33723323-1709-41C1-9CDA-C389D9C55EF8.jpeg',
+      // Crosscurrents
+      'd7c4409e-ddc1-40b0-b703-4912500e95c7__Bild_30.06.26_um_19.57.jpeg',
+      '1f2031d5-ad92-481a-9a3a-cc4d3377167e__image.png.jpg',
+      '58ce50ac-d277-46d6-86f7-3c3351693b07__image.png.jpg',
+      '248b86e0-f1da-4d38-a822-fcb75a8f8639__image.png.jpg',
+      '39d64fa9-a4ca-479b-8a3e-69dfad162f12__image.jpeg',
+      '955b36ee-1fcf-4f43-86ca-463e1a616d89__image.jpeg',
+      '747e8910-b1d2-48a2-8d65-a62ac2478d9b__image.jpeg',
+      'fa8e9c2c-7ed7-4b66-b9b8-4a38da13b025__image.png.jpg',
+      '311ba5a9-484a-40d9-aa94-74625865f57f__image.png.jpg',
+      '62fa35f5-9c41-4911-b8f6-b1789f816d0c__image.jpeg',
+      '1fc1f137-64ef-413e-8e33-299df4c5d0a7__image.jpeg',
+      'fc414214-bd74-4715-b8b9-90181df59920__image.png.jpg',
+      // Europe-Maxxing
+      'europe-maxxing-cover.jpeg',
+      'europe-maxxing-art.jpeg',
+      '26c2a190-1d43-452c-a45f-4733cfdaeab4__3353FC25-6E50-4851-9FFF-7E562B73534D.jpeg',
+      'e897db27-ac32-4c30-af9a-2f7cc32105d9__image.png.jpg',
+      '7f789e9e-a3e2-437b-a437-4fb0275cc6e3__image.png.jpg',
+      '05de95ab-e921-478f-867c-adef08cb8b74__image.png.jpg',
+      '93ed6767-68d8-45a0-a3ce-05b7ccdf1505__image.jpeg',
+      '13eb2668-74ad-4987-b5b4-bfb235c0a27f__image.png.jpg',
+      '492f9c90-c851-448b-89ba-3d3e48056b67__image.png.jpg',
+      '43cde29a-a1c6-457a-b08f-92b8cd1fe4fa__image.png.jpg',
+      'f75e00b9-8136-4799-8d60-76ccb7383461__image.png',
+      '6f78e9ac-93fc-4922-8542-adb134502c07__image.jpeg',
+      'd5f7f41b-6a8a-4747-94a9-76c5a19cb161__image.jpeg',
+      '7ee34506-4530-49bc-b39a-d5c1d10f7484__image.jpeg',
+      'e082cd97-1d2f-497f-904d-0b1f59ce0b35__image.png.jpg',
+      '6aefa42e-6ad4-4151-b841-0a040d66cb3b__image.png.jpg',
+      'a2aeedf0-88a1-4a80-be5f-9c00f81769f3__image.png.jpg'
+    ].map(function (s) { return P + s; });
+    for (let i = POOL.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = POOL[i]; POOL[i] = POOL[j]; POOL[j] = t;
+    }
+    this._pool = POOL;
+    this._cursor = 0;
+
+    const SIGNS = [
+      { text: 'no pitch decks, promise', bg: '#8E1230', fg: '#FAF7F2', br: '10px 14px 10px 16px', border: 'none' },
+      { text: 'hot off the press!', bg: '#C4A6D1', fg: '#2B2950', br: '14px 10px 16px 10px', border: 'none' },
+      { text: 'late nights, big ideas', bg: '#FAF7F2', fg: '#8E1230', br: '12px 16px 12px 10px', border: '2px solid #8E1230' },
+      { text: 'mind the gap → next stop: launch', bg: '#35325E', fg: '#EFE6F4', br: '16px 10px 14px 10px', border: 'none' },
+      { text: 'est. 2026 ✷ London', bg: '#FAF7F2', fg: '#35325E', br: '10px 14px 10px 16px', border: '2px solid #35325E' }
+    ];
+
+    // 13 moving slots: 8 photos + 5 signs, interleaved
+    const ORDER = ['p', 'p', 's', 'p', 's', 'p', 'p', 's', 'p', 's', 'p', 'p', 's'];
+    this._slots = [];
+    this._nodes = [];
+    let si = 0;
+    for (let i = 0; i < ORDER.length; i++) {
+      if (ORDER[i] === 's') {
+        this._slots.push({ isSign: true, sign: SIGNS[si++], x: -3000, y: 0, rot: this._rot(), speed: this._spd(), w: 240, h: 40, band: 0 });
+      } else {
+        const w = this._pw();
+        this._slots.push({ isSign: false, src: this._next(), x: -3000, y: 0, rot: this._rot(), speed: this._spd(), w: w, natR: 1, h: w + 29, band: 0 });
+      }
+    }
+  }
+  _next() { const u = this._pool[this._cursor % this._pool.length]; this._cursor++; return u; }
+  _rot() { return (3 + Math.random() * 5) * (Math.random() < 0.5 ? -1 : 1); }
+  _spd() { return 19; }
+  _pw() { return 138 + Math.random() * 46; }
+
+  // ---- element construction (once) --------------------------------------
+  _buildCollage() {
+    this._init();
+    const self = this;
+    const kids = this._slots.map(function (s, i) {
+      const node = function (k) { return function (n) { self._nodes[i] = self._nodes[i] || {}; self._nodes[i][k] = n; }; };
+      let inner;
+      if (s.isSign) {
+        inner = React.createElement('div', {
+          ref: node('inner'),
+          style: {
+            transform: 'rotate(' + s.rot + 'deg)', background: s.sign.bg, color: s.sign.fg,
+            border: s.sign.border, fontFamily: "'Caveat',cursive", fontWeight: 600, fontSize: '17px',
+            lineHeight: 1, padding: '8px 15px 10px', borderRadius: s.sign.br,
+            boxShadow: '0 8px 18px rgba(43,41,80,0.18)', whiteSpace: 'nowrap', display: 'inline-block'
+          }
+        }, s.sign.text);
+      } else {
+        inner = React.createElement('div', {
+          ref: node('inner'),
+          style: {
+            width: s.w + 'px', transform: 'rotate(' + s.rot + 'deg)', background: '#FFFFFF',
+            padding: '7px 7px 22px', borderRadius: '6px', boxShadow: '0 14px 30px rgba(43,41,80,0.16)'
+          }
+        }, React.createElement('img', {
+          ref: node('img'), src: s.src, alt: '', decoding: 'async',
+          style: { display: 'block', width: '100%', height: 'auto', borderRadius: '3px', background: '#EFE6F4' }
+        }));
+      }
+      return React.createElement('div', {
+        key: 'c' + i, ref: node('wrap'),
+        style: { position: 'absolute', left: 0, top: 0, transform: 'translate3d(-3000px,0,0)', willChange: 'transform', opacity: 0, transition: 'opacity 0.6s ease' }
+      }, inner);
+    });
+    return React.createElement('div', {
+      ref: function (n) { self._layer = n; },
+      'aria-hidden': 'true',
+      style: { position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }
+    }, kids);
+  }
+
+  // ---- motion ------------------------------------------------------------
+  _measure() {
+    if (!this._layer) return false;
+    this._W = this._layer.offsetWidth || 0;
+    this._H = this._layer.offsetHeight || 0;
+    return this._W > 100 && this._H > 100;
+  }
+  _bandY(s, band) {
+    s.band = band;
+    if (band === 0) {
+      return (s.isSign ? 16 : -30) + Math.random() * 80;
+    }
+    return this._H - s.h - (s.isSign ? 26 : -30) - Math.random() * 80;
+  }
+  _bandCounts(skip) {
+    const c = [0, 0];
+    for (let i = 0; i < this._slots.length; i++) {
+      if (this._slots[i] === skip) continue;
+      c[this._slots[i].band] += 1;
+    }
+    return c;
+  }
+  _rightEdge(band, skip) {
+    let r = -Infinity;
+    for (let i = 0; i < this._slots.length; i++) {
+      const s = this._slots[i];
+      if (s === skip || s.band !== band) continue;
+      const n = this._nodes[i];
+      const w = (n && n.inner && n.inner.offsetWidth) ? n.inner.offsetWidth + 30 : (s.isSign ? 280 : s.w + 40);
+      if (s.x + w > r) r = s.x + w;
+    }
+    return r;
+  }
+  _recycle(s, n) {
+    if (this._isMob) { this._recycleMob(s, n); return; }
+    // rule: respawn into whichever band has fewer items, so top/bottom stay balanced
+    const c = this._bandCounts(s);
+    const band = c[0] < c[1] ? 0 : (c[1] < c[0] ? 1 : ((this._flip = !this._flip) ? 0 : 1));
+    // rule: enter behind the last item in that band — nothing ever overlaps
+    const edge = this._rightEdge(band, s);
+    s.x = Math.max(this._W + 90, edge + 130 + Math.random() * 170);
+    s.rot = this._rot();
+    if (!s.isSign) {
+      s.w = this._pw();
+      s.h = s.w * (s.natR || 1) + 29;
+      s.src = this._next();
+      if (n.wrap) { n.wrap.style.opacity = 0; }
+      if (n.img) { n.img.src = s.src; }
+      if (n.inner) { n.inner.style.width = s.w + 'px'; }
+    }
+    s.y = this._bandY(s, band);
+    if (n.inner) { n.inner.style.transform = 'rotate(' + s.rot + 'deg)'; }
+  }
+  _imgReady(i) {
+    // rule: never crop — the polaroid adopts the photo's natural aspect ratio
+    const s = this._slots[i], n = this._nodes[i];
+    if (!s || s.isSign || !n || !n.img) return;
+    const nw = n.img.naturalWidth, nh = n.img.naturalHeight;
+    if (nw > 4 && nh > 4) {
+      s.natR = nh / nw;
+      if (this._isMob && this._mb) {
+        const B = this._mb;
+        s.loading = false;
+        s.w = s.natR > 1.25 ? Math.min(B.mw, Math.round((B.maxPH - 29) / s.natR)) : B.mw;
+        s.h = s.w * s.natR + 29;
+        s.y = B.photoT;
+        // rule: two horizontal photos may share one column, stacked — same band, never overlapping
+        if (s.natR <= 0.85 && s.x >= this._W) {
+          for (let j = 0; j < this._slots.length; j++) {
+            const o = this._slots[j], m = this._nodes[j];
+            if (o.isSign || o === s || o.pair || o.loading) { continue; }
+            if (!(o.natR > 0 && o.natR <= 0.85) || o.x < this._W) { continue; }
+            const w2 = Math.min(B.mw, Math.round((B.maxPH - 70) / (s.natR + o.natR)));
+            o.pair = s; s.pair = o;
+            o.w = w2; o.h = w2 * o.natR + 29;
+            s.w = w2; s.h = w2 * s.natR + 29;
+            o.y = B.photoT;
+            s.x = o.x;
+            s.y = B.photoT + o.h + 12;
+            if (m && m.inner) { m.inner.style.width = o.w + 'px'; }
+            if (m && m.wrap) { m.wrap.style.transform = 'translate3d(' + o.x + 'px,' + o.y + 'px,0)'; }
+            break;
+          }
+        }
+        if (n.inner) { n.inner.style.width = s.w + 'px'; }
+        if (n.wrap) { n.wrap.style.transform = 'translate3d(' + s.x + 'px,' + s.y + 'px,0)'; }
+      } else {
+        s.h = s.w * s.natR + 29;
+        if (s.band === 1) {
+          s.y = this._H - s.h + 30 - Math.random() * 80;
+          if (n.wrap) { n.wrap.style.transform = 'translate3d(' + s.x + 'px,' + s.y + 'px,0)'; }
+        }
+      }
+    }
+    if (n.wrap) { n.wrap.style.opacity = 1; }
+  }
+  // ---- mobile bands: signs lane / photo lane / signs lane, below the CTAs ----
+  _mobBands() {
+    const sect = this._layer ? this._layer.parentElement : null;
+    let ctaB = 320;
+    if (sect) {
+      const cta = sect.querySelector('a[href*="chat.whatsapp"]');
+      if (cta) { ctaB = cta.getBoundingClientRect().bottom - sect.getBoundingClientRect().top; }
+    }
+    const mw = Math.min(300, Math.round(this._W * 0.78));
+    const maxPH = Math.round(mw * 1.25) + 29;
+    return { mw: mw, maxPH: maxPH, signT: ctaB + 18, photoT: ctaB + 70, signB: ctaB + 70 + maxPH + 16 };
+  }
+  _applyLayout() {
+    this._isMob = this._W <= 900;
+    const N = this._slots.length;
+    if (this._isMob) {
+      const B = this._mb = this._mobBands();
+      let px = 24;
+      const sx = [30, 190];
+      for (let i = 0; i < N; i++) {
+        const s = this._slots[i], n = this._nodes[i];
+        if (!s.isSign) {
+          s.pair = null;
+          s.loading = false;
+          const r = s.natR || 1;
+          s.w = r > 1.25 ? Math.min(B.mw, Math.round((B.maxPH - 29) / r)) : B.mw;
+          s.h = s.w * r + 29;
+          s.band = 0;
+          s.x = px;
+          px += s.w + 44 + Math.random() * 40;
+          s.y = B.photoT;
+          if (n && n.inner) { n.inner.style.width = s.w + 'px'; }
+          if (n && n.wrap) { n.wrap.style.zIndex = '2'; }
+        } else {
+          const band = sx[0] <= sx[1] ? 0 : 1;
+          s.band = band;
+          s.x = sx[band];
+          sx[band] += 280 + Math.random() * 200;
+          s.y = band === 0 ? B.signT : B.signB;
+          if (n && n.wrap) { n.wrap.style.zIndex = '1'; }
+        }
+        if (n && n.wrap) { n.wrap.style.transform = 'translate3d(' + s.x + 'px,' + s.y + 'px,0)'; }
+      }
+      return;
+    }
+    this._mb = null;
+    const cx = [-60, -230];
+    for (let i = 0; i < N; i++) {
+      const s = this._slots[i], n = this._nodes[i];
+      if (!s.isSign) {
+        s.w = this._pw();
+        s.h = s.w * (s.natR || 1) + 29;
+        if (n && n.inner) { n.inner.style.width = s.w + 'px'; }
+      }
+      const band = i % 2;
+      const est = s.isSign ? 250 : s.w + 30;
+      s.x = cx[band];
+      cx[band] += est + 140 + Math.random() * 160;
+      s.y = this._bandY(s, band);
+      if (n && n.wrap) {
+        n.wrap.style.zIndex = '';
+        n.wrap.style.transform = 'translate3d(' + s.x + 'px,' + s.y + 'px,0)';
+      }
+    }
+  }
+  _recycleMob(s, n) {
+    const B = this._mb || (this._mb = this._mobBands());
+    s.rot = this._rot();
+    if (!s.isSign) {
+      let edge = -1e9;
+      for (let i = 0; i < this._slots.length; i++) {
+        const o = this._slots[i];
+        if (!o.isSign && o !== s) { edge = Math.max(edge, o.x + o.w); }
+      }
+      if (s.pair) { s.pair.pair = null; }
+      s.pair = null;
+      s.loading = true;
+      s.src = this._next();
+      if (n.wrap) { n.wrap.style.opacity = 0; }
+      if (n.img) { n.img.src = s.src; }
+      s.x = Math.max(this._W + 50, edge + 44 + Math.random() * 40);
+      s.y = B.photoT;
+    } else {
+      let c0 = 0, c1 = 0, e0 = -1e9, e1 = -1e9;
+      for (let i = 0; i < this._slots.length; i++) {
+        const o = this._slots[i];
+        if (!o.isSign || o === s) continue;
+        if (o.band === 0) { c0 += 1; e0 = Math.max(e0, o.x + 300); }
+        else { c1 += 1; e1 = Math.max(e1, o.x + 300); }
+      }
+      const band = c0 < c1 ? 0 : (c1 < c0 ? 1 : ((this._flip = !this._flip) ? 0 : 1));
+      s.band = band;
+      s.x = Math.max(this._W + 60, (band === 0 ? e0 : e1) + 110 + Math.random() * 150);
+      s.y = band === 0 ? B.signT : B.signB;
+    }
+    if (n.inner) { n.inner.style.transform = 'rotate(' + s.rot + 'deg)'; }
+  }
+  _trySetup() {
+    if (this._running) return;
+    this._init();
+    const self = this;
+    if (!this._measure()) {
+      if ((this._retries = (this._retries || 0) + 1) < 60) setTimeout(function () { self._trySetup(); }, 150);
+      return;
+    }
+    this._running = true;
+    this._applyLayout();
+    const N = this._slots.length;
+    for (let i = 0; i < N; i++) {
+      const s = this._slots[i];
+      const n = this._nodes[i];
+      if (n && n.wrap && s.isSign) { n.wrap.style.opacity = 1; }
+      if (!s.isSign && n && n.img) {
+        const idx = i;
+        const img = n.img;
+        const done = function () { self._imgReady(idx); };
+        img.addEventListener('load', done);
+        if (img.complete && img.naturalWidth > 0) { done(); }
+      }
+    }
+    if (!this._onRz) {
+      this._onRz = function () {
+        const pw = self._W, was = self._isMob;
+        self._measure();
+        const m = self._W <= 900;
+        if (self._W !== pw && (m || was)) { self._applyLayout(); }
+      };
+      window.addEventListener('resize', this._onRz);
+    }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this._last = 0;
+    this._raf = requestAnimationFrame(function (t) { self._step(t); });
+  }
+  _step(now) {
+    const self = this;
+    if (this._last) {
+      const dt = Math.min((now - this._last) / 1000, 0.08);
+      for (let i = 0; i < this._slots.length; i++) {
+        const s = this._slots[i], n = this._nodes[i];
+        if (!n || !n.wrap) continue;
+        s.x -= s.speed * dt;
+        if (s.x < -((s.isSign ? 320 : s.w + 60) + 80)) this._recycle(s, n);
+        n.wrap.style.transform = 'translate3d(' + s.x + 'px,' + s.y + 'px,0)';
+      }
+    }
+    this._last = now;
+    this._raf = requestAnimationFrame(function (t) { self._step(t); });
+  }
+
+  componentDidMount() { this._trySetup(); this._tuneTicker(); }
+
+  // keep the ribbon's px/s identical to before the logo swap (was ~22px/s), whatever its content width
+  _tuneTicker() {
+    if (this._tickerSet) return;
+    const el = document.getElementById('eqTickerStrip');
+    if (el && el.scrollWidth > 300) {
+      el.style.animationDuration = Math.round((el.scrollWidth / 2) / 22) + 's';
+      this._tickerSet = true;
+      return;
+    }
+    const self = this;
+    if ((this._tickerTries = (this._tickerTries || 0) + 1) < 40) setTimeout(function () { self._tuneTicker(); }, 200);
+  }
+  componentWillUnmount() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._onRz) window.removeEventListener('resize', this._onRz);
+    this._running = false;
+  }
+
+  renderVals() {
+    this._init();
+    if (!this._collage) this._collage = this._buildCollage();
+    if (!this._running) { const self = this; setTimeout(function () { self._trySetup(); }, 80); }
+    if (!this._tickerSet) { const self = this; setTimeout(function () { self._tuneTicker(); }, 120); }
+    return { showTicker: this.props.showTicker ?? true, collage: this._collage };
+  }
+}
+</script>
+</body>
+</html>
