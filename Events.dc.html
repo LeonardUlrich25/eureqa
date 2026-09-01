@@ -40,7 +40,18 @@
       section[data-screen-label="eureqa! events"] > div:first-child { flex-wrap: wrap !important; row-gap: 4px !important; }
       section[data-screen-label="Partner event board"] > div:first-child > div:first-child { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; }
       section[data-screen-label="eureqa! events"] > div:last-child { grid-template-columns: 1fr !important; gap: 36px !important; padding: 40px 26px !important; }
-      section[data-screen-label="eureqa! events"] > div:last-child > div:last-child { display: none !important; }
+      section[data-screen-label="eureqa! events"] > div:last-child > div:last-child { order: -1 !important; }
+      section[data-screen-label="eureqa! events"] div[data-eq-detailsigns] { justify-content: center !important; gap: 12px 10px !important; }
+      section[data-screen-label="eureqa! events"] div[data-eq-detailsigns] > div { font-size: 18px !important; padding: 8px 14px 10px !important; }
+      section[data-screen-label="Partner event board"] > div:first-child { flex-direction: row !important; align-items: center !important; justify-content: space-between !important; gap: 12px !important; }
+      section[data-screen-label="Partner event board"] > div:first-child > a { padding: 9px 13px !important; font-size: 10px !important; letter-spacing: 0.08em !important; flex: none !important; }
+      section[data-screen-label="Partner event board"] div[data-eq-partner] > div:first-child { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; padding-bottom: 16px !important; margin-bottom: 20px !important; }
+      section[data-screen-label="Partner event board"] div[data-eq-partner] > div:first-child > p { flex: none !important; width: 100% !important; }
+      section[data-screen-label="Partner event board"] div[data-eq-partner] > div:first-child > img { margin-bottom: 2px !important; width: auto !important; margin-left: 0 !important; }
+      section[data-screen-label="Partner event board"] div[data-eq-partner]:nth-of-type(1) > div:first-child > img { height: 38px !important; }
+      section[data-screen-label="Partner event board"] div[data-eq-partner]:nth-of-type(2) > div:first-child > img { height: 44px !important; }
+      section[data-screen-label="Partner event board"] div[data-eq-partner] > div:last-child { grid-template-columns: 1fr !important; gap: 18px !important; }
+      section[data-screen-label="Partner event board"] div[data-eq-partner] > div:last-child > div { min-height: 170px !important; }
       section[data-screen-label="eureqa! events"] > div:last-child > div:first-child > div:last-child { flex-direction: column !important; align-items: center !important; gap: 12px !important; }
       section[data-screen-label="eureqa! events"] > div:last-child > div:first-child > div:last-child > a { width: min(320px, 100%) !important; box-sizing: border-box !important; text-align: center !important; padding: 16px 10px !important; }
       section[data-screen-label="eureqa! events"] > div:last-child > div:first-child > div:last-child > a[href*="subscribe"] { padding: 14px 10px !important; }
@@ -110,18 +121,27 @@
     </div>
     <div style="position:relative; background:#35325E; border-radius:16px; padding:56px 48px; box-shadow:0 18px 40px rgba(43,41,80,0.2); display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:48px; align-items:center">
       <div>
-        <div style="display:inline-block; transform:rotate(-2.5deg); background:#C4A6D1; color:#2B2950; font-family:'Caveat',cursive; font-weight:700; font-size:22px; line-height:1; padding:9px 18px 12px; border-radius:14px 10px 16px 10px; margin-bottom:22px">currently planning…</div>
-        <h3 style="margin:0 0 16px; font-weight:900; font-size:clamp(28px,3vw,42px); letter-spacing:-0.03em; line-height:1.05; color:#FAF7F2">The first eureqa! gathering is in the works.</h3>
-        <p style="margin:0 0 32px; max-width:54ch; font-family:'Newsreader',serif; font-size:18px; line-height:1.6; color:#C9C5E0">Founders, artists and readers from all seven universities in one room: the same energy as the pages, in person. Date, venue and line-up drop first in the newsletter and the WhatsApp community.</p>
+        <div style="display:inline-block; transform:rotate(-2.5deg); background:#C4A6D1; color:#2B2950; font-family:'Caveat',cursive; font-weight:700; font-size:22px; line-height:1; padding:9px 18px 12px; border-radius:14px 10px 16px 10px; margin-bottom:22px">11 September, London</div>
+        <h3 style="margin:0 0 16px; font-weight:900; font-size:clamp(28px,3vw,42px); letter-spacing:-0.03em; line-height:1.05; color:#FAF7F2">Founders &amp; Fizz</h3>
+        <p style="margin:0 0 18px; max-width:54ch; font-family:'Newsreader',serif; font-size:18px; line-height:1.6; color:#C9C5E0">Time to go beyond the pages. eureqa! and Art Pulse are pleased to present Founders &amp; Fizz, bringing founders, artists and readers together.</p>
+        <p style="margin:0 0 18px; max-width:54ch; font-family:'Newsreader',serif; font-size:18px; line-height:1.6; color:#C9C5E0">After six months of publications highlighting the best of student ventures and artists, it is time to bring the eureqa! community together, to celebrate and socialise. We are very excited to be collaborating with Art Pulse for the evening, who are providing the beautiful Coningsby Gallery and the collection of new generation contemporary art they are exhibiting.</p>
+        <p style="margin:0 0 28px; max-width:54ch; font-family:'Newsreader',serif; font-size:18px; line-height:1.6; color:#C9C5E0">Excited to see you there!</p>
+        <div data-eq-detailsigns="1" style="display:flex; flex-wrap:wrap; gap:14px 12px; margin-bottom:32px; max-width:56ch">
+          <div style="transform:rotate(-1.5deg); background:#FAF7F2; color:#35325E; font-family:'Caveat',cursive; font-weight:600; font-size:21px; line-height:1; padding:9px 17px 12px; border-radius:14px 10px 16px 10px; box-shadow:0 8px 18px rgba(0,0,0,0.22)">Thu 11 September</div>
+          <div style="transform:rotate(2deg); background:#C4A6D1; color:#2B2950; font-family:'Caveat',cursive; font-weight:600; font-size:21px; line-height:1; padding:9px 17px 12px; border-radius:10px 14px 10px 16px; box-shadow:0 8px 18px rgba(0,0,0,0.22)">19:00 – 22:00</div>
+          <div style="transform:rotate(-2deg); background:#8E1230; color:#FAF7F2; font-family:'Caveat',cursive; font-weight:600; font-size:21px; line-height:1; padding:9px 17px 12px; border-radius:16px 10px 14px 10px; box-shadow:0 8px 18px rgba(0,0,0,0.22)">18+</div>
+          <div style="transform:rotate(1.5deg); background:#FAF7F2; color:#35325E; font-family:'Caveat',cursive; font-weight:600; font-size:21px; line-height:1; padding:9px 17px 12px; border-radius:12px 16px 12px 10px; box-shadow:0 8px 18px rgba(0,0,0,0.22)">Coningsby Gallery, 30 Tottenham St, W1T 4RJ</div>
+          <div style="transform:rotate(-1deg); background:transparent; color:#EFE6F4; border:2px solid #C4A6D1; font-family:'Caveat',cursive; font-weight:600; font-size:21px; line-height:1; padding:8px 16px 11px; border-radius:10px 14px 10px 16px">smart casual / gallery formal</div>
+        </div>
         <div style="display:flex; flex-wrap:wrap; gap:16px">
-          <a href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373" target="_blank" rel="noopener" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(0,0,0,0.35)" style="text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 28px; border-radius:11px; transition:transform 0.15s ease, box-shadow 0.15s ease">Hear it first on WhatsApp ↗︎</a>
-          <a href="https://eureqa.beehiiv.com/subscribe" target="_blank" rel="noopener" style-hover="background:#3E3B6E; transform:translateY(-2px)" style="text-decoration:none; color:#FAF7F2; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:14px 24px; border:2px solid #C4A6D1; border-radius:11px; background:transparent; transition:background 0.15s ease, transform 0.15s ease">Subscribe for the announcement</a>
+          <a href="https://luma.com/8mj9agzj" target="_blank" rel="noopener" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(0,0,0,0.35)" style="text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 28px; border-radius:11px; transition:transform 0.15s ease, box-shadow 0.15s ease">Get your spot ↗︎</a>
+          <a href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373" target="_blank" rel="noopener" style-hover="background:#3E3B6E; transform:translateY(-2px)" style="text-decoration:none; color:#FAF7F2; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:14px 24px; border:2px solid #C4A6D1; border-radius:11px; background:transparent; transition:background 0.15s ease, transform 0.15s ease">Hear it first on WhatsApp ↗︎</a>
         </div>
       </div>
-      <div style="justify-self:center; display:grid; gap:14px; max-width:320px">
-        <div style="transform:rotate(3deg); background:#FAF7F2; color:#35325E; font-family:'Caveat',cursive; font-weight:600; font-size:22px; line-height:1.2; padding:16px 22px; border-radius:12px 16px 12px 10px; box-shadow:0 10px 22px rgba(0,0,0,0.25)">pints &amp; pitches, probably ✷</div>
-        <div style="transform:rotate(-2deg); background:#C4A6D1; color:#2B2950; font-family:'Caveat',cursive; font-weight:600; font-size:22px; line-height:1.2; padding:16px 22px; border-radius:16px 10px 14px 12px; box-shadow:0 10px 22px rgba(0,0,0,0.25); justify-self:end">meet the founders you've read about</div>
-        <div style="transform:rotate(2deg); background:#8E1230; color:#FAF7F2; font-family:'Caveat',cursive; font-weight:600; font-size:22px; line-height:1.2; padding:16px 22px; border-radius:10px 14px 10px 16px; box-shadow:0 10px 22px rgba(0,0,0,0.25)">somewhere in London, obviously</div>
+      <div style="justify-self:center; width:min(100%,400px)">
+        <a href="https://luma.com/8mj9agzj" target="_blank" rel="noopener" style-hover="transform:rotate(0deg) translateY(-6px)" style="display:block; text-decoration:none; background:#FFFFFF; padding:12px; border-radius:8px; box-shadow:0 20px 44px rgba(0,0,0,0.32); transform:rotate(2deg); transition:transform 0.2s ease">
+          <img src="assets/founders-and-fizz.jpeg" alt="Founders &amp; Fizz, Art Pulse × eureqa!, 11 September, 19:00 to 22:00, Coningsby Gallery, London" style="display:block; width:100%; height:auto; border-radius:4px; background:#EFE6F4">
+        </a>
       </div>
     </div>
   </section>
@@ -135,18 +155,55 @@
       </div>
       <a href="https://www.linkedin.com/company/eureqa-newsletter" target="_blank" rel="noopener" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:12px 20px; border:2px solid #2B2950; border-radius:10px; transition:background 0.12s ease">Partner with us ↗︎</a>
     </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:28px">
-      <div style="border:2px dashed #B7B2CE; border-radius:12px; min-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:28px; text-align:center; background:repeating-linear-gradient(-45deg, #FAF7F2, #FAF7F2 14px, #F3EEE6 14px, #F3EEE6 28px)">
-        <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:0.08em; color:#8B87B5">[ partner event slot ]</span>
-        <span style="font-family:'Newsreader',serif; font-size:15px; color:#6B688F; max-width:30ch">Hackathons, demo days and society nights from our partners will appear here.</span>
+    <p style="margin:-14px 0 40px; max-width:56ch; font-family:'Newsreader',serif; font-size:18px; line-height:1.55; color:#4A4770">Find events open to people from all universities here.</p>
+
+    <div data-eq-partner="1" style="margin-bottom:48px">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:18px 24px; padding-bottom:18px; border-bottom:1px solid #D8D2E8; margin-bottom:28px">
+        <img src="assets/partners/imperial-entrepreneurs.png" alt="Imperial Entrepreneurs" style="display:block; width:auto; height:56px; flex:none">
+        <p style="margin:0; flex:1 1 260px; min-width:0; font-family:'Newsreader',serif; font-size:16.5px; line-height:1.5; color:#4A4770">The largest enterprise-based society at Imperial College London.</p>
+        <div style="display:flex; gap:10px; flex:none">
+          <a href="https://www.instagram.com/imperialentrepreneurs/" target="_blank" rel="noopener" aria-label="Imperial Entrepreneurs on Instagram" style-hover="background:#EFE6F4" style="display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center; color:#2B2950; border:1px solid #D8D2E8; border-radius:11px; text-decoration:none; transition:background 0.12s ease"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.4" y="2.4" width="19.2" height="19.2" rx="5.2" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg></a>
+          <a href="https://www.linkedin.com/company/imperial-entrepreneurs/" target="_blank" rel="noopener" aria-label="Imperial Entrepreneurs on LinkedIn" style-hover="background:#EFE6F4" style="display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center; color:#2B2950; border:1px solid #D8D2E8; border-radius:11px; text-decoration:none; transition:background 0.12s ease"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.23 0z"></path></svg></a>
+        </div>
       </div>
-      <div style="border:2px dashed #B7B2CE; border-radius:12px; min-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:28px; text-align:center; background:repeating-linear-gradient(-45deg, #FAF7F2, #FAF7F2 14px, #F3EEE6 14px, #F3EEE6 28px)">
-        <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:0.08em; color:#8B87B5">[ partner event slot ]</span>
-        <span style="font-family:'Newsreader',serif; font-size:15px; color:#6B688F; max-width:30ch">Coming soon. We're lining up the first partners now.</span>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:28px">
+        <div style="border:2px dashed #B7B2CE; border-radius:12px; min-height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:28px; text-align:center; background:repeating-linear-gradient(-45deg, #FAF7F2, #FAF7F2 14px, #F3EEE6 14px, #F3EEE6 28px)">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:0.08em; color:#8B87B5">[ event slot ]</span>
+          <span style="font-family:'Newsreader',serif; font-size:15px; color:#6B688F; max-width:30ch">Hackathons, demo days and society nights will appear here.</span>
+        </div>
+        <div style="border:2px dashed #B7B2CE; border-radius:12px; min-height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:28px; text-align:center; background:repeating-linear-gradient(-45deg, #FAF7F2, #FAF7F2 14px, #F3EEE6 14px, #F3EEE6 28px)">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:0.08em; color:#8B87B5">[ event slot ]</span>
+          <span style="font-family:'Newsreader',serif; font-size:15px; color:#6B688F; max-width:30ch">Coming soon. The first listings are on their way.</span>
+        </div>
+        <div style="border:2px dashed #B7B2CE; border-radius:12px; min-height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:28px; text-align:center; background:repeating-linear-gradient(-45deg, #FAF7F2, #FAF7F2 14px, #F3EEE6 14px, #F3EEE6 28px)">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:0.08em; color:#8B87B5">[ event slot ]</span>
+          <span style="font-family:'Newsreader',serif; font-size:15px; color:#6B688F; max-width:30ch">Open to students from every university.</span>
+        </div>
       </div>
-      <div style="border:2px dashed #B7B2CE; border-radius:12px; min-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:28px; text-align:center; background:repeating-linear-gradient(-45deg, #FAF7F2, #FAF7F2 14px, #F3EEE6 14px, #F3EEE6 28px)">
-        <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:0.08em; color:#8B87B5">[ partner event slot ]</span>
-        <span style="font-family:'Newsreader',serif; font-size:15px; color:#6B688F; max-width:30ch">Running something students should know about? Get in touch.</span>
+    </div>
+
+    <div data-eq-partner="1">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:18px 24px; padding-bottom:18px; border-bottom:1px solid #D8D2E8; margin-bottom:28px">
+        <img src="assets/partners/ucl-entrepreneurs.png" alt="UCL Entrepreneurs" style="display:block; width:auto; height:62px; flex:none">
+        <p style="margin:0; flex:1 1 260px; min-width:0; font-family:'Newsreader',serif; font-size:16.5px; line-height:1.5; color:#4A4770">The largest enterprise-based society in the UK.</p>
+        <div style="display:flex; gap:10px; flex:none">
+          <a href="https://www.instagram.com/uclentrepreneur/" target="_blank" rel="noopener" aria-label="UCL Entrepreneurs on Instagram" style-hover="background:#EFE6F4" style="display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center; color:#2B2950; border:1px solid #D8D2E8; border-radius:11px; text-decoration:none; transition:background 0.12s ease"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.4" y="2.4" width="19.2" height="19.2" rx="5.2" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg></a>
+          <a href="https://www.linkedin.com/company/ucl-entrepreneurs/" target="_blank" rel="noopener" aria-label="UCL Entrepreneurs on LinkedIn" style-hover="background:#EFE6F4" style="display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center; color:#2B2950; border:1px solid #D8D2E8; border-radius:11px; text-decoration:none; transition:background 0.12s ease"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.23 0z"></path></svg></a>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:28px">
+        <div style="border:2px dashed #B7B2CE; border-radius:12px; min-height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:28px; text-align:center; background:repeating-linear-gradient(-45deg, #FAF7F2, #FAF7F2 14px, #F3EEE6 14px, #F3EEE6 28px)">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:0.08em; color:#8B87B5">[ event slot ]</span>
+          <span style="font-family:'Newsreader',serif; font-size:15px; color:#6B688F; max-width:30ch">Hackathons, demo days and society nights will appear here.</span>
+        </div>
+        <div style="border:2px dashed #B7B2CE; border-radius:12px; min-height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:28px; text-align:center; background:repeating-linear-gradient(-45deg, #FAF7F2, #FAF7F2 14px, #F3EEE6 14px, #F3EEE6 28px)">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:0.08em; color:#8B87B5">[ event slot ]</span>
+          <span style="font-family:'Newsreader',serif; font-size:15px; color:#6B688F; max-width:30ch">Coming soon. The first listings are on their way.</span>
+        </div>
+        <div style="border:2px dashed #B7B2CE; border-radius:12px; min-height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:28px; text-align:center; background:repeating-linear-gradient(-45deg, #FAF7F2, #FAF7F2 14px, #F3EEE6 14px, #F3EEE6 28px)">
+          <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:0.08em; color:#8B87B5">[ event slot ]</span>
+          <span style="font-family:'Newsreader',serif; font-size:15px; color:#6B688F; max-width:30ch">Open to students from every university.</span>
+        </div>
       </div>
     </div>
   </section>

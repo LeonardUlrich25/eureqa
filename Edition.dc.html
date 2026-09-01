@@ -69,6 +69,7 @@
   <script src="data/edition-the-glow-up.js"></script>
   <script src="data/edition-crosscurrents.js"></script>
   <script src="data/edition-europe-maxxing.js"></script>
+  <script src="data/edition-deja-vu.js"></script>
 </helmet>
 
 <div style="min-height:100vh; background:#FAF7F2; color:#2B2950; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased">
@@ -141,7 +142,7 @@
               <sc-if value="{{ sec.uni }}" hint-placeholder-val="{{ true }}">
                 <div style="margin-top:14px; font-size:12px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230">📍 {{ sec.uni }}</div>
               </sc-if>
-              <div style="margin-top:10px; font-family:'Newsreader',serif; font-size:16px; color:#6B688F">— <a href="{{ sec.bylineUrl }}" target="_blank" rel="noopener" style-hover="color:#8E1230" style="color:#6B688F; text-decoration:underline; text-underline-offset:3px">{{ sec.bylineName }}</a></div>
+              <div style="margin-top:10px; font-family:'Newsreader',serif; font-size:16px; color:#6B688F">— {{ sec.bylineEl }}</div>
               <sc-if value="{{ sec.hasLinks }}" hint-placeholder-val="{{ true }}">
                 <div data-desk-links="1" style="margin-top:22px; display:flex; flex-wrap:wrap; gap:8px">
                   <sc-for list="{{ sec.links }}" as="lnk" hint-placeholder-count="2">
@@ -231,7 +232,7 @@ class Component extends DCLogic {
   componentDidMount() {
     this._poll = setInterval(() => {
       const E = window.EUREQA && window.EUREQA.editions;
-      if (E && E['april-fools'] && E['momentum'] && E['the-glow-up'] && E['crosscurrents'] && E['europe-maxxing']) {
+      if (E && E['april-fools'] && E['momentum'] && E['the-glow-up'] && E['crosscurrents'] && E['europe-maxxing'] && E['deja-vu']) {
         clearInterval(this._poll);
         this.setState({ ready: true }, () => this._scrollToHash());
       }
@@ -245,7 +246,7 @@ class Component extends DCLogic {
   _slug() {
     const p = new URLSearchParams(window.location.search).get('e');
     const E = (window.EUREQA && window.EUREQA.editions) || {};
-    return E[p] ? p : 'europe-maxxing';
+    return E[p] ? p : 'deja-vu';
   }
 
   _scrollToHash(hash) {
@@ -324,7 +325,7 @@ class Component extends DCLogic {
     const slug = this._slug();
     const E = window.EUREQA.editions;
     const ed = E[slug];
-    const order = ['april-fools', 'momentum', 'the-glow-up', 'crosscurrents', 'europe-maxxing'];
+    const order = ['april-fools', 'momentum', 'the-glow-up', 'crosscurrents', 'europe-maxxing', 'deja-vu'];
     const idx = order.indexOf(slug);
     const prev = idx > 0 ? E[order[idx - 1]] : null;
     const next = idx < order.length - 1 ? E[order[idx + 1]] : null;
@@ -345,6 +346,9 @@ class Component extends DCLogic {
       uni: s.uni || '',
       bylineName: s.byline.name + (s.byline.role ? ' (' + s.byline.role + ')' : ''),
       bylineUrl: s.byline.url,
+      bylineEl: s.byline.url
+        ? React.createElement('a', { href: s.byline.url, target: '_blank', rel: 'noopener', style: { color: '#6B688F', textDecoration: 'underline', textUnderlineOffset: '3px' } }, s.byline.name + (s.byline.role ? ' (' + s.byline.role + ')' : ''))
+        : React.createElement('span', { style: { color: '#6B688F' } }, s.byline.name + (s.byline.role ? ' (' + s.byline.role + ')' : '')),
       hasLinks: s.links && s.links.length > 0,
       links: s.links || [],
       tagBg: (TAGS[s.kind] || TAGS.startup).bg,

@@ -14,7 +14,8 @@ window.EUREQA = window.EUREQA || {};
     'momentum': 'Momentum',
     'the-glow-up': 'The Glow Up',
     'crosscurrents': 'Crosscurrents',
-    'europe-maxxing': 'Europe-Maxxing'
+    'europe-maxxing': 'Europe-Maxxing',
+    'deja-vu': 'Deja Vu'
   };
 
   function f(name, founders, uni, slug, sectionId, blurb) {
@@ -40,7 +41,11 @@ window.EUREQA = window.EUREQA || {};
       f('Intervyo', 'Jamie Fairey', 'Royal Holloway', 'europe-maxxing', 'intervyo', 'Practice every stage of the application process the way firms actually run it: ATS-read CV reviews, online assessments, HireVues and a fully conversational live mock interviewer. HireVue scores lifted 71% on average after three or more sessions; now live in the US too.'),
       f('Closette', 'Claudia Pipis', 'UCL', 'europe-maxxing', 'closette', 'Vibe shopping made real: upload an outfit screenshot and AI finds matching secondhand pieces across Vinted, Depop, eBay and Vestiaire at once. Built solo with zero coding experience, and launched from a library terrace in Mexico.'),
       f('HELLO Trust', 'Casso Pi', 'LSE', 'europe-maxxing', 'hello-trust', 'A youth-led social enterprise creating opportunities to lead, from supporting autistic children in Shenzhen to easing elderly loneliness in Seoul. Over 200 members across 16 branches spanning Asia-Pacific, Europe and North America.'),
-      f('Cheb Clothing', 'Salman & Farah Sultan', 'LSE', 'europe-maxxing', 'cheb-clothing', 'An urban luxury lifestyle brand built by two siblings, telling stories through places like Bodrum and Lisbon with hand-illustrated designs. Completely bootstrapped, worn from London to LA, and spotted on the Gstaad Guy.')
+      f('Cheb Clothing', 'Salman & Farah Sultan', 'LSE', 'europe-maxxing', 'cheb-clothing', 'An urban luxury lifestyle brand built by two siblings, telling stories through places like Bodrum and Lisbon with hand-illustrated designs. Completely bootstrapped, worn from London to LA, and spotted on the Gstaad Guy.'),
+      f('BusyBodi', 'Amber Miller', 'UCL', 'deja-vu', 'busybodi', 'An app that uses AI to pull pop-ups from across the internet onto one simple map, so you find London’s food, fashion and workshop events before they happen rather than a day too late. Now part of James Frost’s London creatives cohort.'),
+      f('Alchemica', 'Ali Shaker', 'LSE', 'deja-vu', 'alchemica', 'A nutritional gummy brand fusing a magical aesthetic with patented evidence-based formulas, built to rescue nutrition from clinical pharmacy packaging. Its £4,200 domain was sold to Ali for a single framed £1 note.'),
+      f('POLiTOK', 'Amelia Mazurek', 'Westminster', 'deja-vu', 'politok', 'A political education platform for Gen Z turning verified news into short-form video, with an AI-powered claim debunker, a bias monitor and one-click voter registration. App Store launch in preparation.'),
+      f('The Seed Podcast', 'Hassan Baraka', 'Imperial', 'deja-vu', 'the-seed-podcast', 'Conversations with founders and investors answering the questions business school leaves untouched, from breaking into VC to navigating failure. 24 episodes across two seasons, with Season 3 launching in December 2026.')
     ],
     artists: [
       f('Charlotte Sell-Mendoza', 'Singer-songwriter', 'Brighton \u2192 London', 'april-fools', 'charlotte-sell-mendoza', 'A 22-year-old singer-songwriter moving between folk and jazz, telling stories of love, heartbreak and your early twenties. Her turning point: forgetting her lyrics in front of a hundred strangers in Amsterdam, and winning them over with authenticity.'),
@@ -50,14 +55,16 @@ window.EUREQA = window.EUREQA || {};
     ],
     interviews: [
       f('Hayden Taylor', 'Co-founder & CEO, Unloc', 'Portsmouth \u2192 UK-wide', 'crosscurrents', 'hayden-taylor', 'Started the education non-profit Unloc at 16; it now supports 25,000+ young people a year. On letting go, early breaking mechanisms, and why founders must work on the business, not in it.'),
-      f('gesus8', 'Pablo, DJ & producer', 'YouTube · 66k subscribers', 'momentum', 'gesus8', 'From failed DJ attempts and rap beats at 16 to house mixes with millions of views. Pablo on hyperfocus, not overthinking, and why song selection beats technical tricks.')
+      f('gesus8', 'Pablo, DJ & producer', 'YouTube · 66k subscribers', 'momentum', 'gesus8', 'From failed DJ attempts and rap beats at 16 to house mixes with millions of views. Pablo on hyperfocus, not overthinking, and why song selection beats technical tricks.'),
+      f('Megan Scarborough', 'Founder, Art Pulse', 'London', 'deja-vu', 'megan-scarborough', 'A two-time founder building Art Pulse as a marketplace, network and community for artists shut out by the gallery system. On confidence the second time round, and why opportunities have to stay open to everyone.')
     ],
     coverArtists: [
       { name: 'Elif Deren Bolten', edition: 'April Fools', url: 'https://www.linkedin.com/in/elifderenbolten/' },
       { name: 'Julia Fee Hansen', edition: 'Momentum', url: 'https://www.instagram.com/artbyjuliafee/' },
       { name: 'Amber Miller', edition: 'The Glow Up', url: 'https://www.instagram.com/amberalisonart/' },
       { name: 'Veronica Giallatini', edition: 'Crosscurrents', url: 'https://www.linkedin.com/in/veronica-giallatini-48387a273/' },
-      { name: 'Anna Riley', edition: 'Europe-Maxxing', url: 'https://www.instagram.com/artbyannauk/' }
+      { name: 'Anna Riley', edition: 'Europe-Maxxing', url: 'https://www.instagram.com/artbyannauk/' },
+      { name: 'Amelia Fuller', edition: 'Deja Vu', url: 'https://www.instagram.com/ameliafuller.art/' }
     ]
   };
 })();

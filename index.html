@@ -50,6 +50,9 @@
       section[data-screen-label="All editions"] > div > div:first-child { flex-wrap: wrap !important; row-gap: 8px !important; }
       section[data-screen-label="Events sneak peek"] > div { grid-template-columns: 1fr !important; gap: 44px !important; }
     }
+    @media (min-width: 901px) {
+      section[data-screen-label="Latest edition"] h3 { font-size: clamp(21px, 2.5vw, 35px) !important; white-space: nowrap; }
+    }
     @keyframes eqMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     @media (max-width: 900px) {
       header nav > a[target="_blank"] { height: 30px !important; padding: 0 12px !important; font-size: 10px !important; }
@@ -62,13 +65,15 @@
       footer > div > div:first-child > div:last-child > div:first-child { display: none !important; }
       footer > div > div:last-child > span:last-child { display: none !important; }
       footer > div > div:last-child > span:first-child { font-weight: 600 !important; }
-      section[data-screen-label="Latest edition"] a[href$="#intervyo"] > span:first-child > span, section[data-screen-label="Latest edition"] a[href$="#closette"] > span:first-child > span, section[data-screen-label="Latest edition"] a[href$="#hello-trust"] > span:first-child > span, section[data-screen-label="Latest edition"] a[href$="#cheb-clothing"] > span:first-child > span, section[data-screen-label="Latest edition"] a[href$="#teo-geoghegan"] > span:first-child > span { display: block; margin-top: 2px; }
-      section[data-screen-label="Events sneak peek"] > div > div:last-child { gap: 10px !important; }
-      section[data-screen-label="Events sneak peek"] > div > div:last-child > div { background: transparent !important; box-shadow: none !important; padding: 0 !important; border-radius: 0 !important; font-size: 27px !important; }
-      section[data-screen-label="Events sneak peek"] > div > div:last-child > div:nth-child(1) { color: #35325E !important; }
-      section[data-screen-label="Events sneak peek"] > div > div:last-child > div:nth-child(2) { color: #8E1230 !important; }
-      section[data-screen-label="Events sneak peek"] > div > div:last-child > div:nth-child(3) { color: #4A4770 !important; }
+      section[data-screen-label="Latest edition"] a[href$="#busybodi"] > span:first-child > span, section[data-screen-label="Latest edition"] a[href$="#alchemica"] > span:first-child > span, section[data-screen-label="Latest edition"] a[href$="#politok"] > span:first-child > span, section[data-screen-label="Latest edition"] a[href$="#the-seed-podcast"] > span:first-child > span, section[data-screen-label="Latest edition"] a[href$="#megan-scarborough"] > span:first-child > span { display: block; margin-top: 2px; }
       section[data-screen-label="Events sneak peek"] span[data-eq-brk] { display: block; }
+      section[data-screen-label="Official partners"] > div { padding: 44px 24px !important; }
+      section[data-screen-label="Official partners"] > div > div:last-child { grid-template-columns: 1fr !important; gap: 26px !important; }
+      section[data-screen-label="Official partners"] > div > div:last-child > div { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
+      section[data-screen-label="Official partners"] > div > div:last-child > div:nth-child(1) > img { height: 52px !important; }
+      section[data-screen-label="Official partners"] > div > div:last-child > div:nth-child(2) > img { height: 58px !important; }
+      section[data-screen-label="Official partners"] > div > div:last-child > div > p { width: 100% !important; }
+      section[data-screen-label="Events sneak peek"] > div > div:first-child > div:last-child > a { padding: 13px 16px !important; font-size: 11.5px !important; }
     }
   </style>
 </helmet>
@@ -122,11 +127,11 @@
         </div>
       </div>
       <div style="position:relative; justify-self:end; width:min(100%,368px); margin-right:52px">
-        <a href="Edition.dc.html?e=europe-maxxing" style-hover="transform:rotate(0deg) translateY(-6px)" style="display:block; text-decoration:none; color:#2B2950; background:#FFFFFF; padding:12px 12px 15px; border-radius:7px; box-shadow:0 24px 50px rgba(43,41,80,0.24); transform:rotate(2deg); transition:transform 0.2s ease">
-          <img src="assets/img/europe-maxxing-art.jpeg" alt="Europe-Maxxing cover art by Anna Riley" style="display:block; width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:4px; background:#EFE6F4">
+        <a href="Edition.dc.html?e=deja-vu" style-hover="transform:rotate(0deg) translateY(-6px)" style="display:block; text-decoration:none; color:#2B2950; background:#FFFFFF; padding:12px 12px 15px; border-radius:7px; box-shadow:0 24px 50px rgba(43,41,80,0.24); transform:rotate(2deg); transition:transform 0.2s ease">
+          <img src="assets/img/deja-vu-art.jpeg" alt="Deja Vu cover art by Amelia Fuller" style="display:block; width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:4px; background:#EFE6F4">
           <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:12px; padding:0 3px">
-            <span style="font-size:11.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase">N°05 | Europe-Maxxing</span>
-            <span style="font-family:'Caveat',cursive; font-weight:600; font-size:17px; color:#6B688F">art by Anna Riley</span>
+            <span style="font-size:11.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase">N°06 | Deja Vu</span>
+            <span style="font-family:'Caveat',cursive; font-weight:600; font-size:17px; color:#6B688F">art by Amelia Fuller</span>
           </div>
         </a>
         <div style="position:absolute; top:-15px; right:-12px; transform:rotate(8deg); background:#8E1230; color:#FAF7F2; font-family:'Caveat',cursive; font-weight:700; font-size:20px; line-height:1; padding:8px 17px 11px; border-radius:14px 10px 16px 10px; box-shadow:0 8px 18px rgba(43,41,80,0.24)">out now!</div>
@@ -166,39 +171,39 @@
   <section data-screen-label="Latest edition" style="max-width:1320px; margin:0 auto; padding:96px 32px">
     <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; border-bottom:1px solid #D8D2E8; padding-bottom:18px; margin-bottom:52px">
       <h2 style="margin:0; font-weight:900; font-size:clamp(34px,3.6vw,52px); letter-spacing:-0.03em; color:#35325E">The latest edition</h2>
-      <span style="font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8E1230">August 2026</span>
+      <span style="font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8E1230">September 2026</span>
     </div>
     <div style="display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:64px; align-items:start">
-      <a href="Edition.dc.html?e=europe-maxxing" style-hover="transform:translateY(-6px)" style="display:block; text-decoration:none; transition:transform 0.2s ease">
-        <img src="assets/img/europe-maxxing-cover.jpeg" alt="eureqa! Europe-Maxxing cover" style="display:block; width:100%; border-radius:10px; border:1px solid #D8D2E8; box-shadow:0 18px 40px rgba(43,41,80,0.16); background:#EFE6F4">
+      <a href="Edition.dc.html?e=deja-vu" style-hover="transform:translateY(-6px)" style="display:block; text-decoration:none; transition:transform 0.2s ease">
+        <img src="assets/img/deja-vu-cover.jpeg" alt="eureqa! Deja Vu cover" style="display:block; width:100%; border-radius:10px; border:1px solid #D8D2E8; box-shadow:0 18px 40px rgba(43,41,80,0.16); background:#EFE6F4">
       </a>
       <div>
-        <div style="font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8E1230; margin-bottom:14px">N°05 | Europe-Maxxing</div>
-        <h3 style="margin:0 0 16px; font-weight:800; font-size:clamp(28px,2.8vw,40px); letter-spacing:-0.02em; color:#35325E; line-height:1.05">Out of office, unapologetically.</h3>
-        <p style="margin:0 0 32px; font-family:'Newsreader',serif; font-size:19px; line-height:1.55; color:#4A4770; max-width:56ch">Europe-Maxxing began as a caricature of the “lazy” European worker who logs off at five. This month's founders flip it: stepping back in summer to reflect, recalibrate and see the bigger picture is the real superpower of the European founder.</p>
+        <div style="font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8E1230; margin-bottom:14px">N°06 | Deja Vu</div>
+        <h3 style="margin:0 0 16px; font-weight:800; font-size:clamp(28px,2.8vw,40px); letter-spacing:-0.02em; color:#35325E; line-height:1.05">Same faces, same place, different you.</h3>
+        <p style="margin:0 0 32px; font-family:'Newsreader',serif; font-size:19px; line-height:1.55; color:#4A4770; max-width:56ch">The new academic year arrives with the same faces in the same places. This month's founders show that repetition isn't a sign of being stuck, but the platform that fuels growth when familiar challenges are met with renewed perspective.</p>
         <div style="display:grid; gap:0; border-top:1px solid #D8D2E8; margin-bottom:36px">
-          <a href="Edition.dc.html?e=europe-maxxing#intervyo" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
-            <span style="font-weight:700; font-size:17px">Intervyo <span style="font-weight:500; color:#6B688F">— Jamie Fairey</span></span>
-            <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">Royal Holloway</span>
-          </a>
-          <a href="Edition.dc.html?e=europe-maxxing#closette" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
-            <span style="font-weight:700; font-size:17px">Closette <span style="font-weight:500; color:#6B688F">— Claudia Pipis</span></span>
+          <a href="Edition.dc.html?e=deja-vu#busybodi" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
+            <span style="font-weight:700; font-size:17px">BusyBodi <span style="font-weight:500; color:#6B688F">— Amber Miller</span></span>
             <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">UCL</span>
           </a>
-          <a href="Edition.dc.html?e=europe-maxxing#hello-trust" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
-            <span style="font-weight:700; font-size:17px">HELLO Trust <span style="font-weight:500; color:#6B688F">— Casso Pi</span></span>
+          <a href="Edition.dc.html?e=deja-vu#alchemica" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
+            <span style="font-weight:700; font-size:17px">Alchemica <span style="font-weight:500; color:#6B688F">— Ali Shaker</span></span>
             <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">LSE</span>
           </a>
-          <a href="Edition.dc.html?e=europe-maxxing#cheb-clothing" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
-            <span style="font-weight:700; font-size:17px">Cheb Clothing <span style="font-weight:500; color:#6B688F">— Salman Sultan</span></span>
-            <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">LSE</span>
+          <a href="Edition.dc.html?e=deja-vu#politok" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
+            <span style="font-weight:700; font-size:17px">POLiTOK <span style="font-weight:500; color:#6B688F">— Amelia Mazurek</span></span>
+            <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">Westminster</span>
           </a>
-          <a href="Edition.dc.html?e=europe-maxxing#teo-geoghegan" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
-            <span style="font-weight:700; font-size:17px">Artist of the Month <span style="font-weight:500; color:#6B688F">— Teo Geoghegan</span></span>
-            <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">Music</span>
+          <a href="Edition.dc.html?e=deja-vu#the-seed-podcast" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
+            <span style="font-weight:700; font-size:17px">The Seed Podcast <span style="font-weight:500; color:#6B688F">— Hassan Baraka</span></span>
+            <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">Imperial</span>
+          </a>
+          <a href="Edition.dc.html?e=deja-vu#megan-scarborough" style-hover="background:#EFE6F4" style="text-decoration:none; color:#2B2950; display:flex; justify-content:space-between; gap:16px; align-items:baseline; padding:14px 10px; border-bottom:1px solid #D8D2E8; border-radius:8px; transition:background 0.12s ease">
+            <span style="font-weight:700; font-size:17px">Interview: Megan Scarborough <span style="font-weight:500; color:#6B688F">— founder of Art Pulse</span></span>
+            <span style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#8E1230; white-space:nowrap">Interview</span>
           </a>
         </div>
-        <a href="Edition.dc.html?e=europe-maxxing" style-hover="background:#EFE6F4; transform:translateY(-2px)" style="display:inline-block; text-decoration:none; background:transparent; color:#2B2950; font-size:14px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 30px; border:2px solid #2B2950; border-radius:11px; transition:background 0.15s ease, transform 0.15s ease">Read the edition →</a>
+        <a href="Edition.dc.html?e=deja-vu" style-hover="background:#EFE6F4; transform:translateY(-2px)" style="display:inline-block; text-decoration:none; background:transparent; color:#2B2950; font-size:14px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 30px; border:2px solid #2B2950; border-radius:11px; transition:background 0.15s ease, transform 0.15s ease">Read the edition →</a>
       </div>
     </div>
   </section>
@@ -211,6 +216,11 @@
         <a href="Archive.dc.html" style-hover="color:#8E1230; border-color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; border-bottom:2px solid #2B2950; padding-bottom:2px; transition:color 0.12s ease">Browse the archive →</a>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:36px; align-items:end">
+        <a href="Edition.dc.html?e=deja-vu" style-hover="transform:translateY(-6px)" style="text-decoration:none; color:#2B2950; display:block; text-align:center; transition:transform 0.2s ease">
+          <img src="assets/img/deja-vu-cover.jpeg" alt="Deja Vu cover" style="display:block; width:100%; height:auto; border-radius:10px; border:1px solid #D8D2E8; background:#FAF7F2; box-shadow:0 14px 32px rgba(43,41,80,0.14)">
+          <div style="margin-top:16px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">N°06 · September 2026</div>
+          <div style="font-weight:800; font-size:20px; letter-spacing:-0.01em; margin-top:4px">Deja Vu</div>
+        </a>
         <a href="Edition.dc.html?e=europe-maxxing" style-hover="transform:translateY(-6px)" style="text-decoration:none; color:#2B2950; display:block; text-align:center; transition:transform 0.2s ease">
           <img src="assets/img/europe-maxxing-cover.jpeg" alt="Europe-Maxxing cover" style="display:block; width:100%; height:auto; border-radius:10px; border:1px solid #D8D2E8; background:#FAF7F2; box-shadow:0 14px 32px rgba(43,41,80,0.14)">
           <div style="margin-top:16px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">N°05 · August 2026</div>
@@ -226,11 +236,6 @@
           <div style="margin-top:16px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">N°03 · June 2026</div>
           <div style="font-weight:800; font-size:20px; letter-spacing:-0.01em; margin-top:4px">The Glow Up</div>
         </a>
-        <a href="Edition.dc.html?e=momentum" style-hover="transform:translateY(-6px)" style="text-decoration:none; color:#2B2950; display:block; text-align:center; transition:transform 0.2s ease">
-          <img src="assets/cover-momentum.jpeg" alt="Momentum cover" style="display:block; width:100%; height:auto; border-radius:10px; border:1px solid #D8D2E8; background:#FAF7F2; box-shadow:0 14px 32px rgba(43,41,80,0.14)">
-          <div style="margin-top:16px; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">N°02 · May 2026</div>
-          <div style="font-weight:800; font-size:20px; letter-spacing:-0.01em; margin-top:4px">Momentum</div>
-        </a>
       </div>
     </div>
   </section>
@@ -241,7 +246,7 @@
     <h2 style="margin:0 0 48px; font-weight:900; font-size:clamp(34px,3.6vw,52px); letter-spacing:-0.03em; color:#35325E; max-width:20ch">Everyone we've ever featured, in one place.</h2>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:28px">
       <a href="Features.dc.html#startups" style-hover="transform:translateY(-5px); box-shadow:0 18px 38px rgba(43,41,80,0.2)" style="text-decoration:none; color:#2B2950; background:#C4A6D1; border-radius:14px; padding:32px 28px 28px; box-shadow:0 10px 26px rgba(43,41,80,0.12); transition:transform 0.15s ease, box-shadow 0.15s ease">
-        <div style="font-weight:900; font-size:56px; letter-spacing:-0.03em; line-height:1; color:#35325E">18</div>
+        <div style="font-weight:900; font-size:56px; letter-spacing:-0.03em; line-height:1; color:#35325E">22</div>
         <div style="font-weight:800; font-size:22px; letter-spacing:-0.01em; margin-top:10px; text-transform:uppercase">Startups</div>
         <p style="margin:12px 0 0; font-family:'Newsreader',serif; font-size:16px; line-height:1.5; color:#3E3B63">From autonomous drones to trading footballers like stocks.</p>
       </a>
@@ -251,7 +256,7 @@
         <p style="margin:12px 0 0; font-family:'Newsreader',serif; font-size:16px; line-height:1.5; color:#3E3B63">Every Artist of the Month: songwriters, DJs, photographers.</p>
       </a>
       <a href="Features.dc.html#interviews" style-hover="transform:translateY(-5px); box-shadow:0 18px 38px rgba(43,41,80,0.2)" style="text-decoration:none; color:#2B2950; background:#C4A6D1; border-radius:14px; padding:32px 28px 28px; box-shadow:0 10px 26px rgba(43,41,80,0.12); transition:transform 0.15s ease, box-shadow 0.15s ease">
-        <div style="font-weight:900; font-size:56px; letter-spacing:-0.03em; line-height:1; color:#35325E">2</div>
+        <div style="font-weight:900; font-size:56px; letter-spacing:-0.03em; line-height:1; color:#35325E">3</div>
         <div style="font-weight:800; font-size:22px; letter-spacing:-0.01em; margin-top:10px; text-transform:uppercase">Interviews</div>
         <p style="margin:12px 0 0; font-family:'Newsreader',serif; font-size:16px; line-height:1.5; color:#3E3B63">Long conversations with the people who've been there.</p>
       </a>
@@ -264,16 +269,39 @@
       <div>
         <div style="font-size:12px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8E1230; margin-bottom:16px">Beyond the page</div>
         <h2 style="margin:0 0 18px; font-weight:900; font-size:clamp(34px,3.6vw,52px); letter-spacing:-0.03em; color:#35325E; max-width:22ch">The magazine is monthly. <span data-eq-brk="1">The community meets in between.</span></h2>
-        <p style="margin:0 0 36px; max-width:52ch; font-family:'Newsreader',serif; font-size:19px; line-height:1.55; color:#4A4770">The first eureqa! gathering is currently in the works: founders, artists and readers from all seven universities in one room. <br>Our partner event board is warming up too.</p>
+        <div style="display:inline-block; transform:rotate(-2.5deg); background:#C4A6D1; color:#2B2950; font-family:'Caveat',cursive; font-weight:700; font-size:22px; line-height:1; padding:9px 18px 12px; border-radius:14px 10px 16px 10px; box-shadow:0 8px 18px rgba(43,41,80,0.16); margin-bottom:22px">first event, 11 September!</div>
+        <h3 style="margin:0 0 14px; font-weight:900; font-size:clamp(26px,2.6vw,36px); letter-spacing:-0.025em; line-height:1.05; color:#35325E">Founders &amp; Fizz</h3>
+        <p style="margin:0 0 32px; max-width:52ch; font-family:'Newsreader',serif; font-size:19px; line-height:1.55; color:#4A4770">Time to go beyond the pages. eureqa! and Art Pulse are pleased to present Founders &amp; Fizz, bringing founders, artists and readers together at the Coningsby Gallery in London. Open bar, contemporary art, and the community in one room.</p>
         <div style="display:flex; flex-wrap:wrap; align-items:center; gap:15px">
-          <a href="Events.dc.html" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(142,18,48,0.32)" style="text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 30px; border-radius:11px; transition:transform 0.15s ease, box-shadow 0.15s ease">Explore events →</a>
+          <a href="https://luma.com/8mj9agzj" target="_blank" rel="noopener" style-hover="transform:translateY(-2px); box-shadow:0 12px 26px rgba(142,18,48,0.32)" style="text-decoration:none; background:#8E1230; color:#FAF7F2; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:16px 30px; border-radius:11px; transition:transform 0.15s ease, box-shadow 0.15s ease">Get your spot ↗︎</a>
+          <a href="Events.dc.html" style-hover="background:#FAF7F2; transform:translateY(-2px)" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:14px 24px; border:2px solid #2B2950; border-radius:11px; background:transparent; transition:background 0.15s ease, transform 0.15s ease">Explore events →</a>
           <a href="https://chat.whatsapp.com/KeH6oHfYuK6DWKfDSSD373" target="_blank" rel="noopener" style-hover="background:#FAF7F2; transform:translateY(-2px)" style="text-decoration:none; color:#2B2950; font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:14px 24px; border:2px solid #2B2950; border-radius:11px; background:transparent; transition:background 0.15s ease, transform 0.15s ease">Hear it first on WhatsApp ↗︎</a>
         </div>
       </div>
-      <div style="justify-self:center; display:grid; gap:16px; max-width:330px">
-        <div style="transform: rotate(3deg); background: #35325E; color: #EFE6F4; font-family: 'Caveat',cursive; font-weight: 600; font-size: 22px; line-height: 1.2; padding: 16px 22px; border-radius: 12px 16px 12px 10px; box-shadow: 0 10px 22px rgba(43,41,80,0.2); text-align: center">✷ people, prizes, pints ✷</div>
-        <div style="transform:rotate(-2deg); background:#C4A6D1; color:#2B2950; font-family:'Caveat',cursive; font-weight:600; font-size:22px; line-height:1.2; padding:16px 22px; border-radius:16px 10px 14px 12px; box-shadow:0 10px 22px rgba(43,41,80,0.2); justify-self:end">meet the founders you've read about</div>
-        <div style="transform: rotate(2deg); background: #8E1230; color: #FAF7F2; font-family: 'Caveat',cursive; font-weight: 600; font-size: 22px; line-height: 1.2; padding: 16px 22px; border-radius: 10px 14px 10px 16px; box-shadow: 0 10px 22px rgba(43,41,80,0.2); text-align: center">London, UK, Europe</div>
+      <div style="justify-self:center; position:relative; width:min(100%,410px)">
+        <a href="https://luma.com/8mj9agzj" target="_blank" rel="noopener" style-hover="transform:rotate(0deg) translateY(-6px)" style="display:block; text-decoration:none; background:#FFFFFF; padding:12px; border-radius:8px; box-shadow:0 20px 44px rgba(43,41,80,0.22); transform:rotate(-2deg); transition:transform 0.2s ease">
+          <img src="assets/founders-and-fizz.jpeg" alt="Founders &amp; Fizz, Art Pulse × eureqa!, 11 September, 19:00 to 22:00, Coningsby Gallery, London" style="display:block; width:100%; height:auto; border-radius:4px; background:#EFE6F4">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OFFICIAL PARTNERS ================= -->
+  <section data-screen-label="Official partners" style="background:#FAF7F2">
+    <div style="max-width:1320px; margin:0 auto; padding:64px 32px">
+      <div style="display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:16px; border-bottom:1px solid #D8D2E8; padding-bottom:16px; margin-bottom:36px">
+        <div style="font-size:12px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#8E1230">Official partners</div>
+        <a href="Events.dc.html" style-hover="color:#8E1230; border-color:#8E1230" style="text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; border-bottom:2px solid #2B2950; padding-bottom:2px; transition:color 0.12s ease">See their events →</a>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px">
+        <div style="display:flex; align-items:center; gap:24px">
+          <img src="assets/partners/imperial-entrepreneurs.png" alt="Imperial Entrepreneurs" style="display:block; width:auto; height:34px; flex:none">
+          <p style="margin:0; font-family:'Newsreader',serif; font-size:16.5px; line-height:1.5; color:#4A4770">The largest enterprise-based society at Imperial College London.</p>
+        </div>
+        <div style="display:flex; align-items:center; gap:24px">
+          <img src="assets/partners/ucl-entrepreneurs.png" alt="UCL Entrepreneurs" style="display:block; width:auto; height:38px; flex:none">
+          <p style="margin:0; font-family:'Newsreader',serif; font-size:16.5px; line-height:1.5; color:#4A4770">The largest enterprise-based society in the UK.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -407,7 +435,22 @@ class Component extends DCLogic {
       '7ee34506-4530-49bc-b39a-d5c1d10f7484__image.jpeg',
       'e082cd97-1d2f-497f-904d-0b1f59ce0b35__image.png.jpg',
       '6aefa42e-6ad4-4151-b841-0a040d66cb3b__image.png.jpg',
-      'a2aeedf0-88a1-4a80-be5f-9c00f81769f3__image.png.jpg'
+      'a2aeedf0-88a1-4a80-be5f-9c00f81769f3__image.png.jpg',
+      // Deja Vu
+      'deja-vu-cover.jpeg',
+      'deja-vu-art.jpeg',
+      '86633aff-3259-48ed-886f-a6185cfa5383__image.jpeg',
+      '536daef5-47b6-4d37-8dd9-8a54c52f5adc__521C5097-AA43-41B8-A3B4-7DF54A265C80_1_201_a.jpeg',
+      '155bdae4-20bf-4a2a-8345-52bd10a19d37__image.png.jpg',
+      'c3c263ef-4cb7-41c9-ae47-c718e58313be__image.png.jpg',
+      'ce291b8b-0a8e-4d86-95ac-b26eda1a6d5b__image.jpeg',
+      '45036fcd-7f2a-4dcf-8bd1-73ca18ddb147__image.png.jpg',
+      '6d33a452-07c4-47ac-9bdc-d388624ed6be__image.png.jpg',
+      'c7ce5c75-4004-4103-a36b-fc937e5d9836__image.png.jpg',
+      '79b9c349-364f-46a3-9f7e-5c0dddb63bd4__image.png.jpg',
+      '641ef572-e62b-4e86-9590-24735617240f__image.jpeg',
+      '6b00a7fe-76d4-417e-99b6-a25c35fb966c__image.jpeg',
+      'b373d367-4b0a-4591-a7c1-162c3c9d4982__image.jpeg'
     ].map(function (s) { return P + s; });
     for (let i = POOL.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
