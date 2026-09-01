@@ -37,6 +37,9 @@
       header nav > a[href$=".dc.html"], header nav > a[href="index.html"] { display: none !important; }
       header nav > a[target="_blank"] { font-size: 11px !important; height: 44px !important; padding: 0 16px !important; box-sizing: border-box !important; display: inline-flex !important; align-items: center !important; }
       header details[data-eq-burger] { display: block; position: relative; }
+      section[data-screen-label="Our partners"] > div:first-child { flex-wrap: wrap !important; row-gap: 4px !important; }
+      section[data-screen-label="Our partners"] > div:last-child { grid-template-columns: 1fr !important; gap: 20px !important; }
+      section[data-screen-label="Our partners"] > div:last-child > div { padding: 26px 22px !important; }
     }
     @media (max-width: 900px) {
       header nav > a[target="_blank"] { height: 30px !important; padding: 0 12px !important; font-size: 10px !important; }
@@ -168,6 +171,32 @@
         <div style="font-weight:800; font-size:26px; letter-spacing:-0.02em; margin-top:6px">Lauren Manby</div>
         <p style="margin:10px 0 14px; font-family:'Newsreader',serif; font-size:16.5px; line-height:1.55; color:#4A4770">UCL. The editorial voice of eureqa! From atomic cocktails in 1950s Las Vegas to the glow within the unknown, she gives every edition its theme and its spark.</p>
         <a href="https://www.linkedin.com/in/laurenmanby/" target="_blank" rel="noopener" style-hover="background:#C4A6D1" style="display:inline-block; text-decoration:none; color:#2B2950; font-size:12px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:10px 18px; border:2px solid #2B2950; background:#EFE6F4; transition:background 0.12s ease">LinkedIn ↗︎</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OUR PARTNERS ================= -->
+  <section data-screen-label="Our partners" style="max-width:1280px; width:100%; box-sizing:border-box; margin:0 auto; padding:0 32px 80px">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:36px">
+      <h2 style="margin:0; font-weight:900; font-size:clamp(30px,3vw,44px); letter-spacing:-0.03em; color:#35325E">Our partners</h2>
+      <span style="font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8E1230">Official</span>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:28px">
+      <div style="background:#EFE6F4; border-radius:14px; padding:32px 28px; box-shadow:0 10px 26px rgba(43,41,80,0.12)">
+        <img src="assets/partners/imperial-entrepreneurs.png" alt="Imperial Entrepreneurs" style="display:block; width:auto; height:42px; margin-bottom:20px">
+        <p style="margin:0 0 20px; font-family:'Newsreader',serif; font-size:16.5px; line-height:1.55; color:#3E3B63">Imperial Entrepreneurs is the largest enterprise-based society at Imperial College London, the second best university in the world. Their events and community sit at the heart of the university's founder scene, and their listings now appear on our event board.</p>
+        <div style="display:flex; gap:10px">
+          <a href="https://www.instagram.com/imperialentrepreneurs/" target="_blank" rel="noopener" aria-label="Imperial Entrepreneurs on Instagram" style-hover="background:#C4A6D1" style="display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center; color:#2B2950; border:1px solid #B7A8C9; border-radius:11px; text-decoration:none; transition:background 0.12s ease"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.4" y="2.4" width="19.2" height="19.2" rx="5.2" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg></a>
+          <a href="https://www.linkedin.com/company/imperial-entrepreneurs/" target="_blank" rel="noopener" aria-label="Imperial Entrepreneurs on LinkedIn" style-hover="background:#C4A6D1" style="display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center; color:#2B2950; border:1px solid #B7A8C9; border-radius:11px; text-decoration:none; transition:background 0.12s ease"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.23 0z"></path></svg></a>
+        </div>
+      </div>
+      <div style="background:#EFE6F4; border-radius:14px; padding:32px 28px; box-shadow:0 10px 26px rgba(43,41,80,0.12)">
+        <img src="assets/partners/ucl-entrepreneurs.png" alt="UCL Entrepreneurs" style="display:block; width:auto; height:48px; margin-bottom:20px">
+        <p style="margin:0 0 20px; font-family:'Newsreader',serif; font-size:16.5px; line-height:1.55; color:#3E3B63">UCL Entrepreneurs is the largest enterprise-based society in the UK, and the society where eureqa! itself began. Their programmes have launched countless student ventures, several of which you have already read about in these pages.</p>
+        <div style="display:flex; gap:10px">
+          <a href="https://www.instagram.com/uclentrepreneur/" target="_blank" rel="noopener" aria-label="UCL Entrepreneurs on Instagram" style-hover="background:#C4A6D1" style="display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center; color:#2B2950; border:1px solid #B7A8C9; border-radius:11px; text-decoration:none; transition:background 0.12s ease"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.4" y="2.4" width="19.2" height="19.2" rx="5.2" stroke="currentColor" stroke-width="1.8"></rect><circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"></circle></svg></a>
+          <a href="https://www.linkedin.com/company/ucl-entrepreneurs/" target="_blank" rel="noopener" aria-label="UCL Entrepreneurs on LinkedIn" style-hover="background:#C4A6D1" style="display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center; color:#2B2950; border:1px solid #B7A8C9; border-radius:11px; text-decoration:none; transition:background 0.12s ease"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.23 0z"></path></svg></a>
+        </div>
       </div>
     </div>
   </section>
