@@ -70,6 +70,7 @@
   <script src="data/edition-crosscurrents.js"></script>
   <script src="data/edition-europe-maxxing.js"></script>
   <script src="data/edition-deja-vu.js"></script>
+  <script src="data/edition-squirrels.js"></script>
 </helmet>
 
 <div style="min-height:100vh; background:#FAF7F2; color:#2B2950; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased">
@@ -232,7 +233,7 @@ class Component extends DCLogic {
   componentDidMount() {
     this._poll = setInterval(() => {
       const E = window.EUREQA && window.EUREQA.editions;
-      if (E && E['april-fools'] && E['momentum'] && E['the-glow-up'] && E['crosscurrents'] && E['europe-maxxing'] && E['deja-vu']) {
+      if (E && E['april-fools'] && E['momentum'] && E['the-glow-up'] && E['crosscurrents'] && E['europe-maxxing'] && E['deja-vu'] && E['squirrels']) {
         clearInterval(this._poll);
         this.setState({ ready: true }, () => this._scrollToHash());
       }
@@ -246,7 +247,7 @@ class Component extends DCLogic {
   _slug() {
     const p = new URLSearchParams(window.location.search).get('e');
     const E = (window.EUREQA && window.EUREQA.editions) || {};
-    return E[p] ? p : 'deja-vu';
+    return E[p] ? p : 'squirrels';
   }
 
   _scrollToHash(hash) {
@@ -325,7 +326,7 @@ class Component extends DCLogic {
     const slug = this._slug();
     const E = window.EUREQA.editions;
     const ed = E[slug];
-    const order = ['april-fools', 'momentum', 'the-glow-up', 'crosscurrents', 'europe-maxxing', 'deja-vu'];
+    const order = ['april-fools', 'momentum', 'the-glow-up', 'crosscurrents', 'europe-maxxing', 'deja-vu', 'squirrels'];
     const idx = order.indexOf(slug);
     const prev = idx > 0 ? E[order[idx - 1]] : null;
     const next = idx < order.length - 1 ? E[order[idx + 1]] : null;
@@ -357,7 +358,7 @@ class Component extends DCLogic {
     }));
 
     const toc = ed.sections.map((s) => ({
-      label: s.kind === 'note' ? "Editors' Notes" : s.title,
+      label: s.id === 'editors-notes' ? "Editors' Notes" : s.title,
       href: '#' + s.id,
       onJump: (e) => { e.preventDefault(); history.replaceState(null, '', '#' + s.id); this._scrollToHash('#' + s.id); }
     }));

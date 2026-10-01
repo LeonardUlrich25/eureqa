@@ -5,13 +5,13 @@ branch: main
 
 ## Last sync
 
-date: 2026-09-01T00:20:00Z
+date: 2026-10-01T15:10:00Z
 
 ### Updated in this project
 
-- Added edition N°06 Deja Vu across the landing page, Archive, Features and edition reader.
-- Saved and optimised all 14 new Deja Vu images locally, nothing loads from beehiiv.
-- Fixed bylines without a link so they no longer render as dead links.
+- Added edition N°07 Squirrels across the landing page, Archive, Features and edition reader.
+- Saved and optimised all 17 new Squirrels images locally, nothing loads from beehiiv.
+- Added Aspire, OxPitch, Alfie Poelsing (interview) and Rebecca Mary Shevlin (artist) to Features.
 
 ## Screen map
 

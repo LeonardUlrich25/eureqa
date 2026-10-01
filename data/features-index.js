@@ -15,7 +15,8 @@ window.EUREQA = window.EUREQA || {};
     'the-glow-up': 'The Glow Up',
     'crosscurrents': 'Crosscurrents',
     'europe-maxxing': 'Europe-Maxxing',
-    'deja-vu': 'Deja Vu'
+    'deja-vu': 'Deja Vu',
+    'squirrels': 'Squirrels'
   };
 
   function f(name, founders, uni, slug, sectionId, blurb) {
@@ -45,18 +46,22 @@ window.EUREQA = window.EUREQA || {};
       f('BusyBodi', 'Amber Miller', 'UCL', 'deja-vu', 'busybodi', 'An app that uses AI to pull pop-ups from across the internet onto one simple map, so you find London’s food, fashion and workshop events before they happen rather than a day too late. Now part of James Frost’s London creatives cohort.'),
       f('Alchemica', 'Ali Shaker', 'LSE', 'deja-vu', 'alchemica', 'A nutritional gummy brand fusing a magical aesthetic with patented evidence-based formulas, built to rescue nutrition from clinical pharmacy packaging. Its £4,200 domain was sold to Ali for a single framed £1 note.'),
       f('POLiTOK', 'Amelia Mazurek', 'Westminster', 'deja-vu', 'politok', 'A political education platform for Gen Z turning verified news into short-form video, with an AI-powered claim debunker, a bias monitor and one-click voter registration. App Store launch in preparation.'),
-      f('The Seed Podcast', 'Hassan Baraka', 'Imperial', 'deja-vu', 'the-seed-podcast', 'Conversations with founders and investors answering the questions business school leaves untouched, from breaking into VC to navigating failure. 24 episodes across two seasons, with Season 3 launching in December 2026.')
+      f('The Seed Podcast', 'Hassan Baraka', 'Imperial', 'deja-vu', 'the-seed-podcast', 'Conversations with founders and investors answering the questions business school leaves untouched, from breaking into VC to navigating failure. 24 episodes across two seasons, with Season 3 launching in December 2026.'),
+      f('Aspire', 'Aryan Vedhara & Oliver Phillips', 'A-Level students', 'squirrels', 'aspire', 'A fintech platform helping young people turn their goals into reality through better financial decisions, career planning and access to opportunities. Founded by 17-year-old Aryan alongside his A-Levels, now backed by experienced entrepreneurs and launching publicly in November.'),
+      f('OxPitch', 'Samuel Fatoke-Osobukola & Roman Lorello', 'Oxford', 'squirrels', 'oxpitch', 'A short-form video platform asking one question across Oxford: \u201CWhat\u2019s your OxPitch?\u201D It spotlights student startups, projects and creative ventures; its second video reached 94,000 views and sparked 20+ enquiries.')
     ],
     artists: [
       f('Charlotte Sell-Mendoza', 'Singer-songwriter', 'Brighton \u2192 London', 'april-fools', 'charlotte-sell-mendoza', 'A 22-year-old singer-songwriter moving between folk and jazz, telling stories of love, heartbreak and your early twenties. Her turning point: forgetting her lyrics in front of a hundred strangers in Amsterdam, and winning them over with authenticity.'),
       f('gesus8', 'Pablo, DJ & producer', 'YouTube · 66k subscribers', 'momentum', 'gesus8', 'House mixes that became the study soundtrack for students everywhere: millions of views, hand-picked tracklists, and covers that became his trademark. His first single \u201Clet it come to you\u201D is out now.'),
       f('Veronica Giallatini', 'Photographer & product designer', 'London', 'crosscurrents', 'veronica-giallatini', 'A photographer drawn to the quiet poetry of people in spaces: everyday gestures becoming art simply by existing. Moving to London woke the camera back up.'),
-      f('Teo Geoghegan', 'Music curator, creator of vera431', 'London', 'europe-maxxing', 'teo-geoghegan', 'A summer playlist that grew into vera431, a musical collage told in chapters, where every song is part of an overarching story. The final part lands on September 23rd, the last astronomical day of summer.')
+      f('Teo Geoghegan', 'Music curator, creator of vera431', 'London', 'europe-maxxing', 'teo-geoghegan', 'A summer playlist that grew into vera431, a musical collage told in chapters, where every song is part of an overarching story. The final part lands on September 23rd, the last astronomical day of summer.'),
+      f('Rebecca Mary Shevlin', 'Painter', 'Westminster', 'squirrels', 'rebecca-shevlin', 'From burnout after graduating to having a print of a painting she made one random afternoon shown in a London gallery exhibition. On starting before you are ready, and turning passion into sustained motivation.')
     ],
     interviews: [
       f('Hayden Taylor', 'Co-founder & CEO, Unloc', 'Portsmouth \u2192 UK-wide', 'crosscurrents', 'hayden-taylor', 'Started the education non-profit Unloc at 16; it now supports 25,000+ young people a year. On letting go, early breaking mechanisms, and why founders must work on the business, not in it.'),
       f('gesus8', 'Pablo, DJ & producer', 'YouTube · 66k subscribers', 'momentum', 'gesus8', 'From failed DJ attempts and rap beats at 16 to house mixes with millions of views. Pablo on hyperfocus, not overthinking, and why song selection beats technical tricks.'),
-      f('Megan Scarborough', 'Founder, Art Pulse', 'London', 'deja-vu', 'megan-scarborough', 'A two-time founder building Art Pulse as a marketplace, network and community for artists shut out by the gallery system. On confidence the second time round, and why opportunities have to stay open to everyone.')
+      f('Megan Scarborough', 'Founder, Art Pulse', 'London', 'deja-vu', 'megan-scarborough', 'A two-time founder building Art Pulse as a marketplace, network and community for artists shut out by the gallery system. On confidence the second time round, and why opportunities have to stay open to everyone.'),
+      f('Alfie Poelsing', 'Artist-curator', 'Birkbeck', 'squirrels', 'alfie-poelsing', 'An artist-curator whose first exhibition proposal went to twenty venues until one said yes. On creating without an audience, the tiny daily habits behind a freelance practice, and getting your work into exhibitions yourself.')
     ],
     coverArtists: [
       { name: 'Elif Deren Bolten', edition: 'April Fools', url: 'https://www.linkedin.com/in/elifderenbolten/' },
@@ -64,7 +69,8 @@ window.EUREQA = window.EUREQA || {};
       { name: 'Amber Miller', edition: 'The Glow Up', url: 'https://www.instagram.com/amberalisonart/' },
       { name: 'Veronica Giallatini', edition: 'Crosscurrents', url: 'https://www.linkedin.com/in/veronica-giallatini-48387a273/' },
       { name: 'Anna Riley', edition: 'Europe-Maxxing', url: 'https://www.instagram.com/artbyannauk/' },
-      { name: 'Amelia Fuller', edition: 'Deja Vu', url: 'https://www.instagram.com/ameliafuller.art/' }
+      { name: 'Amelia Fuller', edition: 'Deja Vu', url: 'https://www.instagram.com/ameliafuller.art/' },
+      { name: 'Ilona Szalay Di Giorgi', edition: 'Squirrels', url: 'https://www.instagram.com/ilonaszalay/' }
     ]
   };
 })();
